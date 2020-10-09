@@ -8,6 +8,8 @@ import java.util.*;
  * @version 2016.02.29
  * modified by Derek Peacock
  * dated 27/Sep/2020
+ * modified by Kate Gordon
+ * dated 08/10/2020
  */
 public class LabClass
 {
@@ -27,7 +29,7 @@ public class LabClass
         instructor = "unknown";
         room = "unknown";
         timeAndDay = "unknown";
-        
+                
         students = new ArrayList<Student>();
         capacity = maxNumberOfStudents;
     }
@@ -93,8 +95,8 @@ public class LabClass
         for(Student student : students) 
         {
             student.print();
-        }
-        
+       }
+            
         System.out.println("Number of students: " + numberOfStudents());
     }
 }
