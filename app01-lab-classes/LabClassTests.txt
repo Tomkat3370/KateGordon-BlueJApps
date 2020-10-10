@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CO452-Programming Concepts
 Kate Gordon
 21802875
@@ -35,4 +36,43 @@ Beau Starchild, student ID: 20891439, credits: 20
 courseNameComputing
 courseCodeG400
 Reginald Hellfire, student ID: 20891445, credits: 20
+=======
+CO452-Programming Concepts
+Kate Gordon
+21802875
+
+Testing
+
+LabClass co452Lab = new LabClass(3);
+Student studentBing = new Student("Henry Bing", "20891432");
+Student studentStarchild = new Student("Beau Starchild", "20891439");
+Student studentHellfire = new Student("Reginald Hellfire", "20891445");
+Course courseG400 = new Course("Computing", "G400");
+co452Lab.setInstructor("Nicholas Day");
+co452Lab.setRoom("G100");
+co452Lab.setTime("Tuesday, 10:00");
+co452Lab.enrollStudent(Bing);
+co452Lab.enrollStudent(Starchild);
+co452Lab.enrollStudent(Hellfire);
+studentBing.addCourse(courseG400);
+studentStarchild.addCourse(courseG400);
+studentHellfire.addCourse(courseG400);
+studentBing.addCredits(20);
+studentStarchild.addCredits(20);
+studentHellfire.addCredits(20);
+studentBing.changeName("Henrey Bing");
+co452Lab.printList();
+Lab class Tuesday, 10:00
+Instructor: Nicholas Day   Room: G100
+Class list:
+courseNameComputing
+courseCodeG400
+Henrey Bing, student ID: 20891432, credits: 20
+courseNameComputing
+courseCodeG400
+Beau Starchild, student ID: 20891439, credits: 20
+courseNameComputing
+courseCodeG400
+Reginald Hellfire, student ID: 20891445, credits: 20
+>>>>>>> 0340ab1e47d6f0bcbf36a8598673193c046f43ca
 Number of students: 3
