@@ -1,30 +1,24 @@
 
 /**
- * Enumeration class Coin - write a description of the enum class here
+ * Write a description of class Coin here.
  *
- * @author Kate Gordon
- * @version 09/10/2020
+ * @author (your name)
+ * @version (a version number or a date)
  */
-
-public enum Coin
+public class Coin
 {
-    P10 (10),
-    P20 (20),
-    P100 (100),
-    P200 (200);
+   // the width of the coin in milimeters(mm)
+    private int width;
     
-    private final int value;
-    
-    private Coin(int value)
-    
-    {
-        this.value = value;
-    }
-    
-    public int getValue()
-    {
-        return value;
-    }
-    
+    // the weight of the coin in miligrams (mg)
+    private int weight;
    
+    
+    /**
+     * Constructor for objects of class Coin
+     */
+    public Coin()
+    {
+        
+    }
 }
