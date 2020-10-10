@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
@@ -9,7 +10,8 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified by Kate Gordon
+ * Dated 09/10/2020
  */
 public class TicketMachine
 {
@@ -19,18 +21,47 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
+    private ArrayList<Ticket> ticket;
+    
+    private ArrayList<Coin> coin;
+
 
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
+        price = 0;
         balance = 0;
         total = 0;
+        
+        ticket = new ArrayList<Ticket>();
+        coin = new ArrayList<Coin>();
     }
-
+    
     /**
+     * Add a ticket to this ticket machine.
+     */
+    public void addTicket(Ticket newTicket)
+    {
+        {
+            ticket.add(newTicket);
+        }
+    }
+    
+    /**
+     * Add a coin to this ticket machine.
+     * So the machine can recognise the coin value when inserted by a customer
+     */
+    public void addCoin(Coin newCoin)
+    {
+        {
+            coin.add(newCoin);
+        }
+    }
+    
+      /**
      * @Return The price of a ticket.
      */
     public int getPrice()
@@ -63,7 +94,27 @@ public class TicketMachine
                                amount);
         }
     }
-
+    
+    /**
+     * Recieve an amount of money in coins from a customer.
+     * Check the amount is sensible.
+     */
+    public void insertCoin(int value)
+    {
+        
+        {
+            balance = balance + value;
+        }        
+    }
+    
+    /**
+     * Purchase a ticket to a destination for a specific price
+     */
+    public void purchaseTicket(String getTicket)
+    {
+        this.ticket = ticket;
+    }
+    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
