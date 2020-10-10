@@ -29,6 +29,7 @@ public class TicketMachine
 
     /**
      * Create a machine that issues tickets of the given price.
+     
      */
     public TicketMachine()
     {
