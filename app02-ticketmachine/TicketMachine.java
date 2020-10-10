@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
- * The price of a ticket is specified via the constructor.
+ *  * The price of a ticket is specified via the TicketMachine.
  * Instances will check to ensure that a user only enters
  * sensible amounts of money, and will only print a ticket
  * if enough money has been input.
@@ -30,6 +30,8 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     
+    private Ticket ticket;
+    
     private ArrayList<Ticket> ticketList;
     
     private ArrayList<Coin> coinList;
@@ -44,19 +46,13 @@ public class TicketMachine
         balance = 0;
         total = 0;
         
+        ticket = null;
+        
         ticketList = new ArrayList<Ticket>();
         coinList = new ArrayList<Coin>();
     }
     
-    /**
-     * Add a ticket to this ticket machine.
-     */
-    public void addTicket(Ticket newTicket)
-    {
-        {
-            ticket.add(newTicket);
-        }
-    }
+
     
     /**
      * Add a coin to this ticket machine.
@@ -65,7 +61,7 @@ public class TicketMachine
     public void addCoin(Coin newCoin)
     {
         {
-            coin.add(newCoin);
+            coinList.add(newCoin);
         }
     }
     
@@ -118,9 +114,13 @@ public class TicketMachine
     /**
      * Purchase a ticket to a destination for a specific price
      */
-    public void purchaseTicket(String getTicket)
+    public void purchaseTicket(String destination)
     {
-        this.ticket = ticket;
+        //if
+        ticket = AYLESBURY_TICKET;
+        //if
+        
+        //if
     }
     
     /**
