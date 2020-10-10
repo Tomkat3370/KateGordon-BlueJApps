@@ -14,11 +14,7 @@ public class Ticket
     private int price;
     private Date purchasedDateTime;
     
-    public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);
-    public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
-    public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 330);
-   
-    /**
+        /**
      * Constructor for objects of class Ticket setting
      * the destination and price. The date will
      * contain the current system date and time

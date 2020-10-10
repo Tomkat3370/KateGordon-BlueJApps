@@ -15,21 +15,28 @@ import java.util.*;
  */
 public class TicketMachine
 {
+    public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);
+    
+    public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
+    
+    public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 330);
+     
     // The price of a ticket from this machine.
     private int price;
-    // The amount of money entered by a customer so far.
+    
+    // The amount of money entered by a customer (minus ticket charges).
     private int balance;
+    
     // The total amount of money collected by this machine.
     private int total;
     
-    private ArrayList<Ticket> ticket;
+    private ArrayList<Ticket> ticketList;
     
-    private ArrayList<Coin> coin;
+    private ArrayList<Coin> coinList;
 
 
     /**
      * Create a machine that issues tickets of the given price.
-     
      */
     public TicketMachine()
     {
@@ -37,8 +44,8 @@ public class TicketMachine
         balance = 0;
         total = 0;
         
-        ticket = new ArrayList<Ticket>();
-        coin = new ArrayList<Coin>();
+        ticketList = new ArrayList<Ticket>();
+        coinList = new ArrayList<Coin>();
     }
     
     /**
