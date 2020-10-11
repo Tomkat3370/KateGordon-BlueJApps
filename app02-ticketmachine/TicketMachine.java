@@ -51,9 +51,7 @@ public class TicketMachine
         ticketList = new ArrayList<Ticket>();
         coinList = new ArrayList<Coin>();
     }
-    
-
-    
+        
     /**
      * Add a coin to this ticket machine.
      * So the machine can recognise the coin value when inserted by a customer
@@ -105,10 +103,9 @@ public class TicketMachine
      */
     public void insertCoin(int value)
     {
-        
-        {
+       {
             balance = balance + value;
-        }        
+       }        
     }
     
     /**
@@ -116,11 +113,30 @@ public class TicketMachine
      */
     public void purchaseTicket(String destination)
     {
-        //if
+        if (balance > 220)
+        {
         ticket = AYLESBURY_TICKET;
-        //if
-        
-        //if
+        }
+        else
+        {
+        system.out.println("Please pay balance" + balance)
+        }
+        if (balance > 300)
+        {
+          ticket = AMERSHAM_TICKET;
+        }
+        else
+        {
+        system.out.println("Please pay balance" + balance)
+        }            
+        if (balance > 330)
+        {
+        ticket = HIGHWYCOMBE_TICKET
+        }
+        else
+        {
+        system.out.println("Please pay balance" + balance)
+        } 
     }
     
     /**
