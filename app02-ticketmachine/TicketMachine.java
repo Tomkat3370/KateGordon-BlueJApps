@@ -115,11 +115,11 @@ public class TicketMachine
     {
         if (balance > 220)
         {
-        ticket = AYLESBURY_TICKET;
+            ticket = AYLESBURY_TICKET;
         }
         else
         {
-        system.out.println("Please pay balance" + balance)
+            System.out.println("Please pay balance" + balance);
         }
         if (balance > 300)
         {
@@ -127,15 +127,15 @@ public class TicketMachine
         }
         else
         {
-        system.out.println("Please pay balance" + balance)
+            System.out.println("Please pay balance" + balance);
         }            
         if (balance > 330)
         {
-        ticket = HIGHWYCOMBE_TICKET
+            ticket = HIGHWYCOMBE_TICKET;
         }
         else
         {
-        system.out.println("Please pay balance" + balance)
+            System.out.println("Please pay balance" + balance);
         } 
     }
     
