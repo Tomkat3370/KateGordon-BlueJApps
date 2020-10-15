@@ -1,4 +1,5 @@
 import java.util.*;
+import java.text.SimpleDateFormat;
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
@@ -20,7 +21,7 @@ public class TicketMachine
     public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
     
     public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 330);
-     
+         
     // The price of a ticket from this machine.
     private int price;
     
@@ -31,6 +32,8 @@ public class TicketMachine
     private int total;
     
     private Ticket ticket;
+    
+    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyy");
     
     private ArrayList<Ticket> ticketList;
     
@@ -48,6 +51,8 @@ public class TicketMachine
         
         ticket = null;
         
+        selectTicket = currentTicket;
+        
         ticketList = new ArrayList<Ticket>();
         coinList = new ArrayList<Coin>();
     }
@@ -63,7 +68,7 @@ public class TicketMachine
         }
     }
     
-      /**
+     /**
      * @Return The price of a ticket.
      */
     public int getPrice()
@@ -113,29 +118,29 @@ public class TicketMachine
      */
     public void purchaseTicket(String destination)
     {
-        if (balance > 220)
+        if (selectTicket = AYLESBURY_TICKET)
         {
-            ticket = AYLESBURY_TICKET;
+            System.out.println("Please pay" + price + "cents");
         }
         else
         {
-            System.out.println("Please pay balance" + balance);
+            System.out.println("Please select ticket" + ticketList);
         }
-        if (balance > 300)
+        if (selectTicket = AMERSHAM_TICKET)
         {
-          ticket = AMERSHAM_TICKET;
+          System.out.println("Please pay" + price + "cents");
         }
         else
         {
-            System.out.println("Please pay balance" + balance);
+            System.out.println("Please select ticket" + ticketList);
         }            
-        if (balance > 330)
+        if (selectTicket = HIGHWYCOMBE_TICKET)
         {
-            ticket = HIGHWYCOMBE_TICKET;
+            System.out.println("Please pay" + price + "cents");
         }
         else
         {
-            System.out.println("Please pay balance" + balance);
+            System.out.println("Please select ticket" + ticketList);
         } 
     }
     
@@ -160,6 +165,8 @@ public class TicketMachine
             total = total + price;
             // Reduce the balance by the price.
             balance = balance - price;
+            //Clear the balance.
+            balance = 0;
         }
         else 
         {
