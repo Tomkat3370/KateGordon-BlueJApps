@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Enumeration class Coin - write a description of the enum class here
  *
@@ -13,18 +13,25 @@ public enum CoinValues
     P100 (100),
     P200 (200);
     
-    private final int value;
+    private final int coinValue;
     
-    private CoinValues(int value)
+    private ArrayList<Coin> coinList; 
+    
+    private CoinValues(int coinValue)
     
     {
-        this.value = value;
+        this.coinValue = coinValue;
+        
+        coinList = new ArrayList<Coin>();
     }
     
     public int getValue()
     {
-        return value;
+        return coinValue;
     }
     
-   
+    public void print()
+    {
+        System.out.println(coinValue + "CoinValues");
+    }   
 }
