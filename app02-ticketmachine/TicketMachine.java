@@ -31,7 +31,7 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     
-    private Ticket ticket;
+    private Ticket selectTicket;
     
     private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyy");
     
@@ -49,9 +49,7 @@ public class TicketMachine
         balance = 0;
         total = 0;
         
-        ticket = null;
-        
-        selectTicket = currentTicket;
+        selectTicket = null;
         
         ticketList = new ArrayList<Ticket>();
         coinList = new ArrayList<Coin>();
@@ -118,29 +116,29 @@ public class TicketMachine
      */
     public void purchaseTicket(String destination)
     {
-        if (selectTicket = AYLESBURY_TICKET)
+        if (selectTicket == AYLESBURY_TICKET)
         {
-            System.out.println("Please pay" + price + "cents");
+            System.out.println(" Please pay " + price + " cents");
         }
         else
         {
-            System.out.println("Please select ticket" + ticketList);
+            System.out.println(" Please select ticket " + ticketList);
         }
-        if (selectTicket = AMERSHAM_TICKET)
+        if (selectTicket == AMERSHAM_TICKET)
         {
-          System.out.println("Please pay" + price + "cents");
+          System.out.println(" Please pay " + price + " cents");
         }
         else
         {
-            System.out.println("Please select ticket" + ticketList);
+            System.out.println(" Please select ticket " + ticketList);
         }            
-        if (selectTicket = HIGHWYCOMBE_TICKET)
+        if (selectTicket == HIGHWYCOMBE_TICKET)
         {
-            System.out.println("Please pay" + price + "cents");
+            System.out.println(" Please pay " + price + " cents");
         }
         else
         {
-            System.out.println("Please select ticket" + ticketList);
+            System.out.println(" Please select ticket " + ticketList);
         } 
     }
     
@@ -165,8 +163,6 @@ public class TicketMachine
             total = total + price;
             // Reduce the balance by the price.
             balance = balance - price;
-            //Clear the balance.
-            balance = 0;
         }
         else 
         {
