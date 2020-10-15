@@ -1,36 +1,57 @@
+import java.util.*;
 
 /**
- * Write a description of class Coin here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+* Write a description of class Coin here.
+*
+* @author Kate Gordon
+* @version 15/10/2020
+*/
 public class Coin
 {
-    // the width of the coin in milimeters(mm)
-    private int width;
-    
     // the weight of the coin in miligrams (mg)
     private int weight;
     
     // the value of the coin based on available coin values
     private  CoinValues coinValue;
-  
-      
+             
     /**
      * Constructor for objects of class Coin
      */
     public Coin(CoinValues coinValue)
     {
        this.coinValue = coinValue;
+       
+       if (coinValue == CoinValues.P10)
+       {
+           weight = 100;
+       }
+       else if (coinValue == CoinValues.P20)
+       {
+           weight = 200;
+        }
+       else if (coinValue == CoinValues.P100)
+       {
+           weight = 1000;
+        }
+       else //P200
+       {
+           weight = 2000;
+        }
     }
     
     /**
-     * Constructor for objects of class Coin
+     * Get coinValue from the coins weight
      */
-    public Coin(CoinValues coinValue, int width, int weight)
+    public int getCoinValue()
     {
-        this.width = width;
-        this. weight = weight;
+        return coinValue.getValue();
+    }
+     
+    /**
+     * Print the coinValue
+     */
+    public void print()
+    {
+        System.out.println(coinValue + "inserted");
     }
 }
