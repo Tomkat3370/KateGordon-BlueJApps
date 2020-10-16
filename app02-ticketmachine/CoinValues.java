@@ -1,6 +1,8 @@
 import java.util.*;
 /**
- * Enumeration class Coin - write a description of the enum class here
+ * Enumeration class CoinValues stores the value of the coins
+ * to be recognised by the TicketMachine
+ * 
  *
  * @author Kate Gordon
  * @version 09/10/2020
