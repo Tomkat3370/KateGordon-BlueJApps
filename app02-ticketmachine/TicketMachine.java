@@ -1,4 +1,4 @@
-import java.util.*;
+ import java.util.*;
 import java.text.SimpleDateFormat;
 /**
  * TicketMachine models a ticket machine that issues
@@ -38,8 +38,7 @@ public class TicketMachine
     private ArrayList<Ticket> ticketList;
     
     private ArrayList<Coin> coinList;
-
-
+    
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -54,19 +53,8 @@ public class TicketMachine
         ticketList = new ArrayList<Ticket>();
         coinList = new ArrayList<Coin>();
     }
-        
-    /**
-     * Add a coin to this ticket machine.
-     * So the machine can recognise the coin value when inserted by a customer
-     */
-    public void addCoin(Coin newCoin)
-    {
-        {
-            coinList.add(newCoin);
-        }
-    }
     
-     /**
+    /**
      * @Return The price of a ticket.
      */
     public int getPrice()
@@ -114,32 +102,25 @@ public class TicketMachine
     /**
      * Purchase a ticket to a destination for a specific price
      */
-    public void purchaseTicket(String destination)
+    public void purchaseTicket(String Ticket)
     {
         if (selectTicket == AYLESBURY_TICKET)
         {
-            System.out.println(" Please pay " + price + " cents");
+            System.out.println(AYLESBURY_TICKET);
+        }
+        else if (selectTicket == AMERSHAM_TICKET)
+        {
+            System.out.println(AMERSHAM_TICKET);
+        }
+        else if (selectTicket == HIGHWYCOMBE_TICKET)
+        {
+            System.out.println(HIGHWYCOMBE_TICKET);
         }
         else
         {
-            System.out.println(" Please select ticket " + ticketList);
+            System.out.println(" Balance is " + balance +
+                " please select ticket or insert Money");
         }
-        if (selectTicket == AMERSHAM_TICKET)
-        {
-          System.out.println(" Please pay " + price + " cents");
-        }
-        else
-        {
-            System.out.println(" Please select ticket " + ticketList);
-        }            
-        if (selectTicket == HIGHWYCOMBE_TICKET)
-        {
-            System.out.println(" Please pay " + price + " cents");
-        }
-        else
-        {
-            System.out.println(" Please select ticket " + ticketList);
-        } 
     }
     
     /**
@@ -154,7 +135,7 @@ public class TicketMachine
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
+            System.out.println("# Ticket ");
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();

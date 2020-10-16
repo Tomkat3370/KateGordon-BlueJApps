@@ -30,7 +30,8 @@ public class Ticket
         this.price = price;
                      
         today = new Date();
-     }
+        
+    }
     
     /**
      * Get the Date for the current Ticket
@@ -40,9 +41,9 @@ public class Ticket
        return formatter.format(today); 
     }
 
-     /**
-     * Print the ticket to include destination, price and 
-     */
+    /**
+    * Print the ticket to include destination, price and 
+    */
     public void print()
     {
         System.out.println(" Ticket " + destination +

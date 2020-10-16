@@ -17,7 +17,7 @@ public class Coin
     /**
      * Constructor for objects of class Coin
      */
-    public Coin(CoinValues coinValue)
+    public Coin()
     {
        this.coinValue = coinValue;
        
@@ -33,7 +33,7 @@ public class Coin
        {
            weight = 1000;
         }
-       else //P200
+       else //CoinValues.P200
        {
            weight = 2000;
         }
