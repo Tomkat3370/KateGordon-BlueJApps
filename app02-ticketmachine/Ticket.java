@@ -1,7 +1,9 @@
 import java.util.Date;
 import java.text.SimpleDateFormat;
 /**
- * Write a description of class Ticket here.
+ * Ticket class will store information about a ticket
+ * including the journey destination, price and the
+ * date and time the ticket was purchased
  *
  * @author Kate Gordon
  * @version 09/01/2020
@@ -11,6 +13,7 @@ public class Ticket
     // Attributes
     private String destination;
     
+    // currency cents
     private int price;
     
     private Date today = new Date();
@@ -34,6 +37,22 @@ public class Ticket
     }
     
     /**
+     * Get the Price for the current Ticket
+     */
+    public int getPrice()
+    {
+        return price;
+    }
+    
+    /**
+     * Get the destination for the current Ticket
+     */
+    public String getDestination()
+    {
+        return destination;
+    }
+    
+    /**
      * Get the Date for the current Ticket
      */
     public String getDate()
@@ -46,7 +65,10 @@ public class Ticket
     */
     public void print()
     {
-        System.out.println(" Ticket " + destination +
-            " Price " + price + " Purchased " + today);
+        System.out.println();
+        System.out.println(" Ticket to " + destination );
+        System.out.println(" " + price + " cents ");
+        System.out.println( " Purchased " + today);
+        System.out.println();
     }
 }   
