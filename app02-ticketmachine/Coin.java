@@ -1,7 +1,8 @@
 import java.util.*;
 
 /**
-* Write a description of class Coin here.
+* Coin class stores the weight of the coins for the TicketMachine
+* to recognise the coinValue from the weight of the coin inserted.
 *
 * @author Kate Gordon
 * @version 15/10/2020
