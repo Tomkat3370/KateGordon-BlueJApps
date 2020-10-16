@@ -1,4 +1,4 @@
- import java.util.*;
+import java.util.*;
 import java.text.SimpleDateFormat;
 /**
  * TicketMachine models a ticket machine that issues
@@ -100,9 +100,17 @@ public class TicketMachine
     }
     
     /**
+     * Select a ticket from the TicketMachine
+     */
+    public void selectTicket()
+    {
+        this.selectTicket = selectTicket;
+    }
+    
+    /**
      * Purchase a ticket to a destination for a specific price
      */
-    public void purchaseTicket(String Ticket)
+    public void purchaseTicket(String destination)
     {
         if (selectTicket == AYLESBURY_TICKET)
         {
@@ -163,5 +171,22 @@ public class TicketMachine
         amountToRefund = balance;
         balance = 0;
         return amountToRefund;
+    }
+    
+    /**
+     * Print all available tickets to the user
+     */
+    
+    public void printAllTickets()
+    {
+       System.out.println(" The following three destinations are available ");
+       System.out.println(); 
+       AYLESBURY_TICKET.print();
+       System.out.println();
+       AMERSHAM_TICKET.print();
+       System.out.println();
+       HIGHWYCOMBE_TICKET.print();
+       System.out.println();
+       System.out.println(" Please select your ticket destination ");
     }
 }
