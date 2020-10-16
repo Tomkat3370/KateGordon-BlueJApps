@@ -44,7 +44,6 @@ public class TicketMachine
      */
     public TicketMachine()
     {
-        price = 0;
         balance = 0;
         total = 0;
         
@@ -54,14 +53,6 @@ public class TicketMachine
         coinList = new ArrayList<Coin>();
     }
     
-    /**
-     * @Return The price of a ticket.
-     */
-    public int getPrice()
-    {
-        return price;
-    }
-
     /**
      * Return The amount of money already inserted for the
      * next ticket.
@@ -114,15 +105,19 @@ public class TicketMachine
     {
         if (selectTicket == AYLESBURY_TICKET)
         {
-            System.out.println(AYLESBURY_TICKET);
+            System.out.println(" Please take your ticket ");
+            System.out.println();
+            AYLESBURY_TICKET.print();
+            System.out.println();
+            System.out.println(" Your remaining balance is " + balance);
         }
         else if (selectTicket == AMERSHAM_TICKET)
         {
-            System.out.println(AMERSHAM_TICKET);
+            AMERSHAM_TICKET.print();
         }
         else if (selectTicket == HIGHWYCOMBE_TICKET)
         {
-            System.out.println(HIGHWYCOMBE_TICKET);
+            HIGHWYCOMBE_TICKET.print();
         }
         else
         {
