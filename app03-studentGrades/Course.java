@@ -12,7 +12,13 @@ public class Course
     
     private String code;
     
-    private
+    private Module module1;
+    
+    private Module module2;
+    
+    private Module module3;
+    
+    private Module module4;
 
     /**
      * Constructor for objects of class Course
@@ -24,20 +30,17 @@ public class Course
     }
     
     /**
-     * Add a student to this LabClass.
+     * Add module
      */
-    public void enrollStudent(Student newStudent)
+    public void addModule(Module module, int moduleNo)
     {
-        if(students.size() == capacity) 
+        if(moduleNo == 1)
         {
-            System.out.println("The class is full, you cannot enrol.");
-        }
-        else 
-        {
-            students.add(newStudent);
+            module = module1;
         }
     }
     
+    //create course mark
 
     /**
      * Print the course title and code to the output terminal.
