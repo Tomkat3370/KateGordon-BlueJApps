@@ -20,9 +20,9 @@ public class TicketMachine
     
     public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
     
-    public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 330);
-         
-    // The price of a ticket from this machine.
+    public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("HighWycombe", 330);
+    
+    // The price of the ticket requested by a customer
     private int price;
     
     // The amount of money entered by a customer (minus ticket charges).
@@ -89,27 +89,15 @@ public class TicketMachine
             balance = balance + value;
        }        
     }
-    
+   
     /**
-     * Select a ticket from the TicketMachine
+     * Select a ticket to a destination for a specific price
      */
-    public void selectTicket()
+    public void selectTicket(String destination)
     {
-        this.selectTicket = selectTicket;
-    }
-    
-    /**
-     * Purchase a ticket to a destination for a specific price
-     */
-    public void purchaseTicket(String destination)
-    {
-        if (selectTicket == AYLESBURY_TICKET)
+        if(selectTicket == AYLESBURY_TICKET)
         {
-            System.out.println(" Please take your ticket ");
-            System.out.println();
             AYLESBURY_TICKET.print();
-            System.out.println();
-            System.out.println(" Your remaining balance is " + balance);
         }
         else if (selectTicket == AMERSHAM_TICKET)
         {
@@ -121,10 +109,11 @@ public class TicketMachine
         }
         else
         {
-            System.out.println(" Balance is " + balance +
-                " please select ticket or insert Money");
+            System.out.println(" please select a destination");
         }
     }
+    
+    
     
     /**
      * Print a ticket if enough money has been inserted, and
@@ -138,7 +127,7 @@ public class TicketMachine
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket ");
+            System.out.println("# Ticket " + selectTicket);
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();
