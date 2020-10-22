@@ -113,8 +113,6 @@ public class TicketMachine
         }
     }
     
-    
-    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
@@ -172,5 +170,37 @@ public class TicketMachine
        HIGHWYCOMBE_TICKET.print();
        System.out.println();
        System.out.println(" Please select your ticket destination ");
+    }
+    
+    /**
+     * Add 20 cent coin
+     */
+    public void insert20centCoin()
+    {
+        balance = balance + 20;
+    }
+    
+    /**
+     * Add 10 cent coin
+     */
+    public void insert10centCoin()
+    {
+        balance = balance + 10;
+    }
+    
+    /**
+     * Add 100 cent coin
+     */
+    public void insert100centCoin()
+    {
+        balance = balance + 100;
+    }
+    
+    /**
+     * Add 200 cent coin
+     */
+    public void insert200centCoin()
+    {
+        balance = balance + 200;
     }
 }
