@@ -19,7 +19,7 @@ public class Ticket
     private Date today = new Date();
     
     private SimpleDateFormat formatter = 
-            new SimpleDateFormat("dd/MMM/yyy");
+            new SimpleDateFormat("dd/MMM/yyyy");
     
     /**
      * Constructor for objects of class Ticket setting
