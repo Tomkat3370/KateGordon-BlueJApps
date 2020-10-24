@@ -33,7 +33,7 @@ public class TicketMachine
     
     private Ticket selectTicket;
     
-    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyy");
+    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
     
     private ArrayList<Ticket> ticketList;
     
