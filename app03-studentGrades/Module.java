@@ -10,9 +10,11 @@ public class Module
     //Attributes
     private String title;
     
-    private String code;
+    private String codeNo;
     
     private int mark;
+    
+    private int credit;
     
     /**
      * Constructor for objects of class Module
@@ -21,11 +23,31 @@ public class Module
     {
         this.title = title;
         this.codeNo = codeNo;
-        mark = 0;
+        mark = -1;
+        credit = 15;
+    }
+    
+    /**
+     * Award a mark to the module
+     */
+    public void awardMark(int mark)
+    {
+        this.mark = mark;
     }
     
     /**
      * 
      */
-    public void
+    public int getMark()
+    {
+        return mark;
+    }
+    
+    /**
+     * 
+     */
+    public void print()
+    {
+        System.out.print("Module: " + title + " " + codeNo + " " + mark);
+    }
 }
