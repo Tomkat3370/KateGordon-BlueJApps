@@ -1,9 +1,9 @@
-
+import java.util.*;
 /**
- * Write a description of class Module here.
+ * Module represents the modules within a students chosen Course
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Kate Gordon
+ * @version 26/10/2020
  */
 public class Module
 {
@@ -16,6 +16,10 @@ public class Module
     
     private int credit;
     
+    private boolean completed;
+    
+    private boolean passed;
+    
     /**
      * Constructor for objects of class Module
      */
@@ -24,7 +28,17 @@ public class Module
         this.title = title;
         this.codeNo = codeNo;
         mark = -1;
-        credit = 15;
+        credit = 15;      
+        passed = false;
+        completed = false;
+    }
+    
+    /**
+     * Get the module code number
+     */
+    public String getCodeNo()
+    {
+        return codeNo;
     }
     
     /**
@@ -36,7 +50,7 @@ public class Module
     }
     
     /**
-     * 
+     * Retrieve the current mark for a module
      */
     public int getMark()
     {
@@ -44,7 +58,7 @@ public class Module
     }
     
     /**
-     * 
+     * Print the module information
      */
     public void print()
     {
