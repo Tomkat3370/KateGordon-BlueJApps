@@ -28,7 +28,7 @@ public class Module
         this.title = title;
         this.codeNo = codeNo;
         mark = -1;
-        credit = 15;      
+        credit = 0;      
         passed = false;
         completed = false;
     }
@@ -55,6 +55,27 @@ public class Module
     public int getMark()
     {
         return mark;
+    }
+    
+    public boolean isComplete()
+    {
+        if(mark >= 40)
+        {
+            credit = 15;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /**
+     * 
+     */
+    public int getCredit()
+    {
+        return credit;
     }
     
     /**
