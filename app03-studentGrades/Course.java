@@ -21,7 +21,13 @@ public class Course
     
     private Module module4;
     
+    private int mark;
+    
     private int moduleMark;
+    
+    private char grade;
+    
+    private char moduleGrade;
     
     private int finalMark;
     
@@ -44,18 +50,24 @@ public class Course
 
     }
     
+    /**
+     * Method for awarding marks
+     */
     public void awardMark(int mark)
     {
         this.finalMark = mark;
     }
     
+    /**
+     * get code number
+     */
     public String getCodeNo()
     {
         return codeNo;
     }
     
     /**
-     * 
+     * Create modules
      */
     public void createModules()
     {
@@ -93,7 +105,7 @@ public class Course
     }
     
     /**
-     * 
+     * Award a mark to a module
      */
     public void setMark(int mark, String codeNo)
     {
@@ -119,6 +131,9 @@ public class Course
         }
     }
     
+    /**
+     * Calculate the Final Mark for the Course
+     */
     public void calculateFinalMark()
     {
        int totalMark = module1.getMark() + module2.getMark() + 
@@ -127,7 +142,38 @@ public class Course
        finalMark = totalMark / 4;
        print();
     }
-    //create course mark
+    
+    /**
+     * Convert marks into grades
+     */
+    public char grade()
+    {
+        if(mark == 0 - 39)
+        {
+            grade = 'F';
+        }
+        else if(mark == 40 - 49)
+        {
+            grade = 'D';
+        }
+        else if(mark == 50 - 59)
+        {
+            grade = 'C';
+        }
+        else if(mark == 60 - 69)
+        {
+            grade = 'B';
+        }
+        else if(mark == 70 - 100)
+        {
+            grade = 'A';
+        }
+        else
+        {
+            System.out.print("No mark awarded");
+        }
+    }
+        
 
     /**
      * Print the course title and code to the output terminal.
@@ -137,8 +183,11 @@ public class Course
         System.out.println("courseName " + title);
         System.out.println("courseCode " + codeNo);
         //print individual module marks
-        System.out.println("Module 1 " + moduleMark);
-        
+        System.out.println("Module 1 " + module1.getMark() + module1.getGrade());
+        System.out.println("Module 2 " + module2.getMark() + module2.getGrade());
+        System.out.println("Module 3 " + module3.getMark() + module3.getGrade());
+        System.out.println("Module 4 " + module4.getMark() + module4.getGrade());
         System.out.println("Final Mark = " + finalMark);
+        System.out.println("Final Grade = " + finalGrade);
     }
 }
