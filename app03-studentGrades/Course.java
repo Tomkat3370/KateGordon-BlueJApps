@@ -21,20 +21,16 @@ public class Course
     
     private Module module4;
     
-    private int mark;
-    
     private int moduleMark;
     
-    private char grade;
+    private int credit;
     
     private char moduleGrade;
     
     private int finalMark;
     
-    private String finalGrade;
+    private char finalGrade;
     
-
-
     /**
      * Constructor for objects of class Course
      */
@@ -43,19 +39,19 @@ public class Course
       title = courseName;
       codeNo = courseCode;
       
-      this.finalMark = 0;
-      this.finalGrade = null;
+      this.finalMark = -1;
+      this.finalGrade = 0;
       
       createModules();
 
     }
-    
+  
     /**
-     * Method for awarding marks
+     * Method for awarding grades
      */
-    public void awardMark(int mark)
+    public void awardGrade(char grade)
     {
-        this.finalMark = mark;
+        this.finalGrade = grade;
     }
     
     /**
@@ -144,50 +140,80 @@ public class Course
     }
     
     /**
+     * 
+     */
+    public void calculateCredit()
+    {
+        credit = module1.getCredit() + module2.getCredit() +
+        module3.getCredit() + module4.getCredit();
+    }
+    
+    public boolean modulesComplete()
+    {
+        if((module1.isComplete()) && (module2.isComplete()) &&
+        (module3.isComplete()) && (module4.isComplete()))
+        {
+            calculateCredit();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public void calculateCourseMark()
+    {
+       int courseMark = module1.getMark() + module2.getMark() +
+            module3.getMark() + module4.getMark();
+    }  
+    
+    /**
      * Convert marks into grades
      */
-    public char grade()
+    public void calculateGrade()
     {
-        if(mark == 0 - 39)
+        if(finalMark >= 0 && finalMark < 40)
         {
-            grade = 'F';
+            finalGrade = 'F';
         }
-        else if(mark == 40 - 49)
+        else if(finalMark >= 40 && finalMark < 50)
         {
-            grade = 'D';
+            finalGrade = 'D';
         }
-        else if(mark == 50 - 59)
+        else if(finalMark >= 50 && finalMark < 60)
         {
-            grade = 'C';
+            finalGrade = 'C';
         }
-        else if(mark == 60 - 69)
+        else if(finalMark >= 60 && finalMark < 70)
         {
-            grade = 'B';
+            finalGrade = 'B';
         }
-        else if(mark == 70 - 100)
+        else if(finalMark >= 70 && finalMark <= 100)
         {
-            grade = 'A';
+            finalGrade = 'A';
         }
         else
         {
             System.out.print("No mark awarded");
         }
     }
-        
-
+    
     /**
-     * Print the course title and code to the output terminal.
+     * Print the course title and code, modules and marks
      */
     public void print()
     {
         System.out.println("courseName " + title);
         System.out.println("courseCode " + codeNo);
         //print individual module marks
-        System.out.println("Module 1 " + module1.getMark() + module1.getGrade());
-        System.out.println("Module 2 " + module2.getMark() + module2.getGrade());
-        System.out.println("Module 3 " + module3.getMark() + module3.getGrade());
-        System.out.println("Module 4 " + module4.getMark() + module4.getGrade());
+        System.out.println("Module 1 " + module1.getMark());
+        System.out.println("Module 2 " + module2.getMark());
+        System.out.println("Module 3 " + module3.getMark());
+        System.out.println("Module 4 " + module4.getMark());
+        
         System.out.println("Final Mark = " + finalMark);
         System.out.println("Final Grade = " + finalGrade);
+        System.out.println("Final Credit = " + credit);
     }
 }
