@@ -100,9 +100,9 @@ public class Student
         for(Course course : course)
         {
             course.print();
-       }
-        
-        
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        }
+                
+        System.out.println(name + ", student ID: " + id + ", credits: " 
+            + credits);
     }
 }
