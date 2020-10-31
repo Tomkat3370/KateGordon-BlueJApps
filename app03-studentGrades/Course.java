@@ -1,6 +1,6 @@
 import java.util.*;
 /**
- * Course represents the chosen courses in an educational institution.
+ * Course represents a chosen course in an educational institution.
  *
  * @author Derek Peacock
  * @version 0.1
@@ -24,8 +24,6 @@ public class Course
     private int moduleMark;
     
     private int credit;
-    
-    private char moduleGrade;
     
     private int finalMark;
     
@@ -103,21 +101,21 @@ public class Course
     /**
      * Award a mark to a module
      */
-    public void setMark(int mark, String codeNo)
+    public void setMark(int mark, int moduleNo)
     {
-        if(module1.getCodeNo() == codeNo)
+        if(moduleNo == 1)
         {
             module1.awardMark(mark);
         }
-        else if(module2.getCodeNo() == codeNo)
+        else if(moduleNo == 2)
         {
             module2.awardMark(mark);
         }
-        else if(module3.getCodeNo() == codeNo)
+        else if(moduleNo == 3)
         {
             module3.awardMark(mark);
         }
-        else if(module4.getCodeNo() == codeNo)
+        else if(moduleNo == 4)
         {
             module4.awardMark(mark);
         }
@@ -132,15 +130,22 @@ public class Course
      */
     public void calculateFinalMark()
     {
-       int totalMark = module1.getMark() + module2.getMark() + 
+        if(courseComplete())
+        {
+            int totalMark = module1.getMark() + module2.getMark() + 
             module3.getMark() + module4.getMark();
             
-       finalMark = totalMark / 4;
-       print();
+            finalMark = totalMark / 4;
+            print();
+        }
+        else
+        {
+            System.out.println("Insuficient data");
+        }
     }
     
     /**
-     * 
+     * Calculate the credit for the course
      */
     public void calculateCredit()
     {
@@ -148,7 +153,10 @@ public class Course
         module3.getCredit() + module4.getCredit();
     }
     
-    public boolean modulesComplete()
+    /**
+     * Calculate whether the course has been completed
+     */
+    public boolean courseComplete()
     {
         if((module1.isComplete()) && (module2.isComplete()) &&
         (module3.isComplete()) && (module4.isComplete()))
@@ -162,6 +170,9 @@ public class Course
         }
     }
     
+    /**
+     * Calculate the course mark
+     */
     public void calculateCourseMark()
     {
        int courseMark = module1.getMark() + module2.getMark() +
@@ -200,17 +211,17 @@ public class Course
     }
     
     /**
-     * Print the course title and code, modules and marks
+     * Print the full course details
      */
     public void print()
     {
         System.out.println("courseName " + title);
         System.out.println("courseCode " + codeNo);
         //print individual module marks
-        System.out.println("Module 1 " + module1.getMark());
-        System.out.println("Module 2 " + module2.getMark());
-        System.out.println("Module 3 " + module3.getMark());
-        System.out.println("Module 4 " + module4.getMark());
+        System.out.println("Module 1 " + module1 + module1.getMark());
+        System.out.println("Module 2 " + module2 + module2.getMark());
+        System.out.println("Module 3 " + module3 + module3.getMark());
+        System.out.println("Module 4 " + module4 + module4.getMark());
         
         System.out.println("Final Mark = " + finalMark);
         System.out.println("Final Grade = " + finalGrade);
