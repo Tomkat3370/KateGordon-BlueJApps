@@ -27,10 +27,20 @@ public class Module
     {
         this.title = title;
         this.codeNo = codeNo;
+        
         mark = -1;
-        credit = 0;      
-        passed = false;
+        credit = 0; 
+        
         completed = false;
+        passed = false;
+    }
+    
+    /**
+     * Get module title
+     */
+    public String getTitle()
+    {
+        return title;
     }
     
     /**
@@ -71,7 +81,7 @@ public class Module
     }
     
     /**
-     * 
+     * Retrieve credit
      */
     public int getCredit()
     {
@@ -83,6 +93,7 @@ public class Module
      */
     public void print()
     {
-        System.out.print("Module: " + title + " " + codeNo + " " + mark);
+        System.out.print("Module: " + title + " " + codeNo + " " 
+            + mark + "%");
     }
 }
