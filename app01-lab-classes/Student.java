@@ -17,9 +17,9 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
-    
+
     private ArrayList<Course> course;
-    
+
     /**
      * Create a new student with a given name and ID number.
      */
@@ -28,11 +28,11 @@ public class Student
         name = fullName;
         id = studentID;
         credits = 0;
-        
+
         course = new ArrayList<Course> ();
     }
 
-        /**
+    /**
      * Add a course to this student.
      */
     public void addCourse(Course newCourse)
@@ -41,7 +41,7 @@ public class Student
             course.add(newCourse);
         }
     }
-    
+
     /**
      * Return the full name of this student.
      */
@@ -57,7 +57,7 @@ public class Student
     {
         name = replacementName;
     }
-        
+
     /**
      * Return the student ID of this student.
      */
@@ -91,7 +91,7 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
-    
+
     /**
      * Print the student's name and ID number to the output terminal.
      */
@@ -100,9 +100,8 @@ public class Student
         for(Course course : course)
         {
             course.print();
-       }
-        
-        
+        }
+
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
     }
 }
