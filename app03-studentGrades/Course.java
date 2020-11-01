@@ -94,7 +94,7 @@ public class Course
         }
         else
         {
-            System.out.println(" Please select module ");
+            System.out.println(" Please select valid module number ");
         }
     }
     
@@ -140,7 +140,7 @@ public class Course
         }
         else
         {
-            System.out.println("Insuficient data");
+            System.out.println("Course Incomplete");
         }
     }
     
@@ -202,6 +202,22 @@ public class Course
     }
     
     /**
+     * print the modules for the course
+     */
+    public void printModules()
+    {
+        System.out.println("Modules:");
+        
+        module1.print();
+        System.out.println();
+        module2.print();
+        System.out.println();
+        module3.print();
+        System.out.println();
+        module4.print();
+    }
+    
+    /**
      * Print the full course details
      */
     public void print()
@@ -214,8 +230,11 @@ public class Course
         System.out.println("Module 3 " + module3 + module3.getMark());
         System.out.println("Module 4 " + module4 + module4.getMark());
         
-        System.out.println("Final Mark = " + finalMark);
-        System.out.println("Final Grade = " + finalGrade);
-        System.out.println("Final Credit = " + credit);
+        if(courseComplete())
+        {
+            System.out.println("Final Mark = " + finalMark);
+            System.out.println("Final Grade = " + finalGrade);
+            System.out.println("Final Credit = " + credit);
+        }
     }
 }
