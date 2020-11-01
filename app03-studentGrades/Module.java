@@ -67,7 +67,25 @@ public class Module
         return mark;
     }
     
+    public void credit()
+    {
+        credit = (mark / 100) * 15;
+    }
+    
     public boolean isComplete()
+    {
+        if(mark >= 0)
+        {
+            this.credit = credit;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public boolean isPassed()
     {
         if(mark >= 40)
         {
