@@ -70,7 +70,7 @@ public class Course
         module3 = new Module("CO404 ", " Cyber Threat and Risk Management");
         module4 = new Module("CO456 ", " Web Development");
     }
-        
+    
     /**
      * Add module
      */
