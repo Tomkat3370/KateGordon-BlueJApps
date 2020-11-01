@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.util.ArrayList;
 /**
  * The Student class represents a student in a student administration system.
  * It holds the student details relevant in our context.
@@ -32,7 +32,7 @@ public class Student
         course = new ArrayList<Course> ();
     }
 
-     /**
+    /**
      * Add a course to this student.
      */
     public void addCourse(Course newCourse)
