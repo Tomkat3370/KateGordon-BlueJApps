@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * Model some details of a product sold by a company.
  * 
@@ -41,6 +42,14 @@ public class Product
     {
         return name;
     }
+    
+    /**
+     * Set a new name for a product based on ID number.
+     */
+    public void changeName(int ID, String replacementName)
+    {
+        name = replacementName;
+    }
 
     /**
      * @return The quantity in stock.
@@ -49,6 +58,8 @@ public class Product
     {
         return quantity;
     }
+    
+
 
     /**
      * @return The id, name and quantity in stock.
