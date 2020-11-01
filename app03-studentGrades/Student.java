@@ -1,8 +1,8 @@
 import java.util.*;
 import java.util.ArrayList;
 /**
- * The Student class represents a student in a student administration system.
- * It holds the student details relevant in our context.
+ * The Student class represents a student in a student administration 
+ * system. It holds the student details relevant in our context.
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
