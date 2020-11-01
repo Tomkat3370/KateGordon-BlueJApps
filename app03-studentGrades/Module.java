@@ -67,11 +67,6 @@ public class Module
         return mark;
     }
     
-    public void credit()
-    {
-        credit = (mark / 100) * 15;
-    }
-    
     public boolean isComplete()
     {
         if(mark >= 0)
