@@ -70,7 +70,7 @@ public class Course
         module3 = new Module("CO404 ", " Cyber Threat and Risk Management");
         module4 = new Module("CO456 ", " Web Development");
     }
-    
+   
     /**
      * Add module
      */
@@ -171,18 +171,9 @@ public class Course
     }
     
     /**
-     * Calculate the course mark
-     */
-    public void calculateCourseMark()
-    {
-       int courseMark = module1.getMark() + module2.getMark() +
-            module3.getMark() + module4.getMark();
-    }  
-    
-    /**
      * Convert marks into grades
      */
-    public void calculateGrade()
+    public void calculateFinalGrade()
     {
         if(finalMark >= 0 && finalMark < 40)
         {
