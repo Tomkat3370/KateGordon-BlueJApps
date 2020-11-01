@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.*;
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
@@ -85,7 +85,7 @@ public class StockManager
      */
     public void showDetails(int id)
     {
-        Product product = getProduct(id);
+        Product product = findProduct(id);
 
         if(product != null) 
         {
@@ -100,7 +100,7 @@ public class StockManager
      */
     public void sellProduct(int id)
     {
-        Product product = getProduct(id);
+        Product product = findProduct(id);
 
         if(product != null) 
         {
@@ -109,25 +109,15 @@ public class StockManager
             showDetails(id);
         }
     }
-
-    /**
-     * Get the product with the given id from the manager.
-     * An error message is printed if there is no match.
-     * @param id The ID of the product.
-     * @return The Product, or null if no matching one is found.
+    
+        /**
+     * Remove a product from stock based on ID number
      */
-    public Product getProduct(int id)
+    public void removeProduct(Product stock)
     {
-        Product product = manager.findProduct(id);
-
-        if(product == null) 
-        {
-            System.out.println("Product with ID: " + id +
-                " is not recognised.");
-        }
-        return product;
+        
     }
-
+    
     /**
      * Print details of all the products.
      */
