@@ -24,9 +24,22 @@ public class StockManager
      * Add a product to the list.
      * @param item The item to be added.
      */
-    public void addProduct(Product item)
+    public void addProduct(Product product)
     {
-        stock.add(item);
+        stock.add(product);
+    }
+    
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        if(product != null)
+        {
+            stock.remove(product);
+        }
+        else
+        {
+            System.out.println("Please enter a valid id number");
+        } 
     }
 
     /**
@@ -35,13 +48,13 @@ public class StockManager
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
         Product product = findProduct(id);
         if(product != null)
         {
             product.increaseQuantity(amount);
-            System.out.println("Product Delvered : " + product);
+            System.out.println("Product Delivered : " + product);
         }
         else 
         {
@@ -98,28 +111,20 @@ public class StockManager
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void sellProduct(int id, int amount)
     {
         Product product = findProduct(id);
 
         if(product != null) 
         {
             showDetails(id);
-            product.sellOne();
+            product.sell(amount);
             showDetails(id);
         }
     }
     
-        /**
-     * Remove a product from stock based on ID number
-     */
-    public void removeProduct(Product stock)
-    {
-        
-    }
-    
-    /**
-     * Print details of all the products.
+     /**
+     * Print details and stock levels of all the products.
      */
     public void printAllProduct()
     {
@@ -128,4 +133,25 @@ public class StockManager
             System.out.println(product);
         }
     }
+    
+    /**
+     * Print products with low stock levels.
+     */
+    public void lowStock()
+    {
+        Product product = findProduct();
+        
+        if(quantity <= )
+        {
+            System.out.println("WARNING LOW STOCK!! " + product + " "  
+                + quantity);
+        }
+    }
+    
+    public void printHeading()
+    {
+        System.out.println("\n#############");
+        System.out.println("Kate Gordon");
+        System.out.println("#############\n");
+    } 
 }
