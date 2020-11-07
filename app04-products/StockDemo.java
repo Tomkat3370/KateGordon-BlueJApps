@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Random;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -14,13 +15,17 @@ public class StockDemo
     // The stock manager.
     private StockManager manager;
 
+    private Random generator;
+
     /**
      * Create a StockManager and populate it with a few
      * sample products.
      */
     public StockDemo(StockManager manager)
     {
+        generator = new Random();
         this.manager = manager;
+
         //choose products with full name for easy searching and create 10
         manager.addProduct(new Product(100, "Stradivarous Violin"));
         manager.addProduct(new Product(101, "Casio Keyboard"));
@@ -33,54 +38,78 @@ public class StockDemo
         manager.addProduct(new Product(108, "Violin Stand"));
         manager.addProduct(new Product(109, "Guitar Stand"));
     }
-    
-    /**
-     * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
-     */
-    public void demoDelivery()
-    {
-        // Show details of all of the products.
-        manager.printAllProduct();
-        
-        manager.delivery(100, 1);
-        manager.delivery(101, 3);
-        manager.delivery(102, 2);
-        manager.delivery(103, 5);
-        manager.delivery(104, 10);
-        manager.delivery(105, 5);
-        manager.delivery(106, 3);
-        manager.delivery(107, 12);
-        manager.delivery(108, 4);
-        manager.delivery(109, 4);
-        
-        manager.printAllProduct();
-    }
-    
-     /**
-     * Get the product with the given id from the manager.
-     * An error message is printed if there is no match.
-     * @param id The ID of the product.
-     * @return The Product, or null if no matching one is found.
-     */
-    public Product getProduct(int id)
-    {
-        Product product = manager.findProduct(id);
 
-        if(product == null) 
+    /**
+    * Provide a very simple demonstration of how a StockManager
+    * might be used. Details of one product are shown, the
+    * product is restocked, and then the details are shown again.
+    */
+    public void runDemo()
+    {
+       // Show details of all of the products.
+       manager.printAllProduct();
+
+       demoDelivery();
+       demoSell();
+    }
+
+    private void demoDelivery()
+    {
+        printHeading("Delivery");
+
+        int amount = 0;
+
+        for(int id = 100; id <= 109; id++)
         {
-            System.out.println("Product with ID: " + id +
-                " is not recognised.");
+            amount = generator.nextInt(7) + 1;
+            manager.deliverProduct(id, amount);
+            amount++;
         }
-        return product;
+    
     }
-
-    /**
-     * @return The stock manager.
-     */
-    public StockManager getManager()
+   
+    private void demoSell()
     {
-        return manager;
+        printHeading("Sell");
+        
+        int amount = 0;
+    
+        for(int id = 100; id <= 109; id++)
+        {
+            amount = generator.nextInt(7) + 1;
+            manager.sellProduct(id, amount);
+            amount++;
+        }
     }
+    
+    /**
+     * find a product from a partial name
+     */
+    public void search(String prefix)
+    {
+        int id = 100;
+        
+        while(id <= 109)
+        {
+            Product product = manager.findProduct(id);
+            String name = product.getName();
+            name = name.toLowerCase();
+            prefix = prefix.toLowerCase();
+            
+            if(name.contains(prefix))
+            {
+                System.out.println(product);
+            }
+            id ++;
+        }
+        
+    }
+    
+    public void printHeading(String verb)
+    {
+        System.out.println();
+        System.out.println("Demonstrating Product" + verb);
+        System.out.println();
+    }
+    
 }
