@@ -152,7 +152,7 @@ public class Course
         credit = module1.getCredit() + module2.getCredit() +
         module3.getCredit() + module4.getCredit();
     }
-    
+        
     /**
      * Calculate whether the course has been completed
      */
@@ -162,6 +162,21 @@ public class Course
         (module3.isComplete()) && (module4.isComplete()))
         {
             calculateCredit();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /**
+     * Calculate whether the course has been passed
+     */
+    public boolean coursePassed()
+    {
+        if(finalMark >= 40)
+        {
             return true;
         }
         else
