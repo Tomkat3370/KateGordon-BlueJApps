@@ -1,0 +1,199 @@
+105: Guitar Strings stock level: 0
+106: FrenchHorn Mute stock level: 0
+107: Violin Resin stock level: 0
+108: Violin Stand stock level: 0
+109: Guitar Stand stock level: 0
+stock.deliverProduct(100, 10);
+Product Delivered : 100: Stradivarous Violin stock level: 10
+stock.deliverProduct(101, 5);
+Product Delivered : 101: Casio Keyboard stock level: 5
+stock.deliverProduct(102, 7);
+Product Delivered : 102: Alexander FrenchHorn stock level: 7
+stock.deliverProduct(104, 8);
+Product Delivered : 104: Violin Strings stock level: 8
+stock.deliverProduct(105, 3);
+Product Delivered : 105: Guitar Strings stock level: 3
+stock.deliverProduct(106, 9);
+Product Delivered : 106: FrenchHorn Mute stock level: 9
+stock.deliverProduct(107, 2);
+Product Delivered : 107: Violin Resin stock level: 2
+stock.deliverProduct(108, 3);
+Product Delivered : 108: Violin Stand stock level: 3
+stock.deliverProduct(109, 9);
+Product Delivered : 109: Guitar Stand stock level: 9
+stock.deliverProduct(110, 7);
+Product ID 110NOT FOUND!!!
+stock.findProduct(100)
+    returned Object <object reference>
+stock.findProduct(101)
+    returned Object <object reference>
+stock.numberInStock(100)
+    returned int 10
+stock.printHeading();
+
+#############
+Kate's Stock List
+#############
+
+stock.printLowStock();
+WARNING! Low Stock
+103: Music Stand stock level: 0
+stock.removeProduct(100);
+stock.printAllProduct();
+101: Casio Keyboard stock level: 5
+102: Alexander FrenchHorn stock level: 7
+103: Music Stand stock level: 0
+104: Violin Strings stock level: 8
+105: Guitar Strings stock level: 3
+106: FrenchHorn Mute stock level: 9
+107: Violin Resin stock level: 2
+108: Violin Stand stock level: 3
+109: Guitar Stand stock level: 9
+stock.findProduct(100)
+    returned Object null
+stock.sellProduct(109, 1);
+109: Guitar Stand stock level: 9
+Sold 1 of Guitar Stand
+109: Guitar Stand stock level: 8
+stock.showDetails(100);
+stock.showDetails(101);
+101: Casio Keyboard stock level: 5
+demo.search("Violin");
+    Exception occurred.
+demo.search("violin");
+    Exception occurred.
+demo.printHeading("Delivery");
+
+Demonstrating ProductDelivery
+
+demo.printHeading("Sell");
+
+Demonstrating ProductSell
+
+demo.runDemo();
+101: Casio Keyboard stock level: 5
+102: Alexander FrenchHorn stock level: 7
+103: Music Stand stock level: 0
+104: Violin Strings stock level: 8
+105: Guitar Strings stock level: 3
+106: FrenchHorn Mute stock level: 9
+107: Violin Resin stock level: 2
+108: Violin Stand stock level: 3
+109: Guitar Stand stock level: 8
+
+Demonstrating ProductDelivery
+
+Product ID 100NOT FOUND!!!
+Product Delivered : 101: Casio Keyboard stock level: 9
+Product Delivered : 102: Alexander FrenchHorn stock level: 10
+Product Delivered : 103: Music Stand stock level: 4
+Product Delivered : 104: Violin Strings stock level: 12
+Product Delivered : 105: Guitar Strings stock level: 7
+Product Delivered : 106: FrenchHorn Mute stock level: 12
+Product Delivered : 107: Violin Resin stock level: 9
+Product Delivered : 108: Violin Stand stock level: 6
+Product Delivered : 109: Guitar Stand stock level: 15
+
+Demonstrating ProductSell
+
+101: Casio Keyboard stock level: 9
+Sold 6 of Casio Keyboard
+101: Casio Keyboard stock level: 3
+102: Alexander FrenchHorn stock level: 10
+Sold 2 of Alexander FrenchHorn
+102: Alexander FrenchHorn stock level: 8
+103: Music Stand stock level: 4
+Insuficient Stock 4 amount ordered = 6
+103: Music Stand stock level: 0
+104: Violin Strings stock level: 12
+Sold 2 of Violin Strings
+104: Violin Strings stock level: 10
+105: Guitar Strings stock level: 7
+Sold 7 of Guitar Strings
+105: Guitar Strings stock level: 0
+106: FrenchHorn Mute stock level: 12
+Sold 3 of FrenchHorn Mute
+106: FrenchHorn Mute stock level: 9
+107: Violin Resin stock level: 9
+Sold 1 of Violin Resin
+107: Violin Resin stock level: 8
+108: Violin Stand stock level: 6
+Sold 5 of Violin Stand
+108: Violin Stand stock level: 1
+109: Guitar Stand stock level: 15
+Sold 1 of Guitar Stand
+109: Guitar Stand stock level: 14
+Product violin = new Product(100, "Stradivarious Violin");
+stock.addProduct(violin);
+demo.runDemo();
+101: Casio Keyboard stock level: 3
+102: Alexander FrenchHorn stock level: 8
+103: Music Stand stock level: 0
+104: Violin Strings stock level: 10
+105: Guitar Strings stock level: 0
+106: FrenchHorn Mute stock level: 9
+107: Violin Resin stock level: 8
+108: Violin Stand stock level: 1
+109: Guitar Stand stock level: 14
+100: Stradivarious Violin stock level: 0
+
+Demonstrating ProductDelivery
+
+Product Delivered : 100: Stradivarious Violin stock level: 3
+Product Delivered : 101: Casio Keyboard stock level: 6
+Product Delivered : 102: Alexander FrenchHorn stock level: 14
+Product Delivered : 103: Music Stand stock level: 1
+Product Delivered : 104: Violin Strings stock level: 17
+Product Delivered : 105: Guitar Strings stock level: 7
+Product Delivered : 106: FrenchHorn Mute stock level: 10
+Product Delivered : 107: Violin Resin stock level: 12
+Product Delivered : 108: Violin Stand stock level: 8
+Product Delivered : 109: Guitar Stand stock level: 15
+
+Demonstrating ProductSell
+
+100: Stradivarious Violin stock level: 3
+Insuficient Stock 3 amount ordered = 4
+100: Stradivarious Violin stock level: 0
+101: Casio Keyboard stock level: 6
+Sold 1 of Casio Keyboard
+101: Casio Keyboard stock level: 5
+102: Alexander FrenchHorn stock level: 14
+Sold 4 of Alexander FrenchHorn
+102: Alexander FrenchHorn stock level: 10
+103: Music Stand stock level: 1
+Insuficient Stock 1 amount ordered = 7
+103: Music Stand stock level: 0
+104: Violin Strings stock level: 17
+Sold 3 of Violin Strings
+104: Violin Strings stock level: 14
+105: Guitar Strings stock level: 7
+Sold 6 of Guitar Strings
+105: Guitar Strings stock level: 1
+106: FrenchHorn Mute stock level: 10
+Sold 5 of FrenchHorn Mute
+106: FrenchHorn Mute stock level: 5
+107: Violin Resin stock level: 12
+Sold 6 of Violin Resin
+107: Violin Resin stock level: 6
+108: Violin Stand stock level: 8
+Sold 6 of Violin Stand
+108: Violin Stand stock level: 2
+109: Guitar Stand stock level: 15
+Sold 6 of Guitar Stand
+109: Guitar Stand stock level: 9
+stock.printLowStock();
+WARNING! Low Stock
+103: Music Stand stock level: 0
+WARNING! Low Stock
+105: Guitar Strings stock level: 1
+WARNING! Low Stock
+100: Stradivarious Violin stock level: 0
+demo.search("violin");
+100: Stradivarious Violin stock level: 0
+104: Violin Strings stock level: 14
+107: Violin Resin stock level: 6
+108: Violin Stand stock level: 2
+demo.search("strings");
+104: Violin Strings stock level: 14
+105: Guitar Strings stock level: 1
