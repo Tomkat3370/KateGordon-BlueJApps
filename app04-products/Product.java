@@ -1,9 +1,12 @@
 import java.util.*;
 /**
- * Model some details of a product sold by a company.
+ * Product class allows the creation of product objects to 
+ * model some details of a product sold by a company.
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
+ * modified Kate Gordon
+ * dated 08/11/2020
  */
 public class Product
 {
@@ -13,6 +16,8 @@ public class Product
     private String name;
     // The quantity of this product in stock.
     private int quantity;
+    
+    private int lowStock;
 
     /**
      * Constructor for objects of class Product.
@@ -25,6 +30,7 @@ public class Product
         this.id = id;
         this.name = name;
         quantity = 0;
+        lowStock = 5;
     }
 
     /**
