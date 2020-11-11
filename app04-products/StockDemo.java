@@ -53,6 +53,10 @@ public class StockDemo
        demoSell();
     }
 
+    /**
+     * Provide a simple demonstration of how a delivery
+     * increases the stock of all products.
+     */
     private void demoDelivery()
     {
         printHeading("Delivery");
@@ -68,6 +72,10 @@ public class StockDemo
     
     }
    
+    /**
+     * Provide a simple demonstration of how selling
+     * products decreases the stock.
+     */
     private void demoSell()
     {
         printHeading("Sell");
@@ -83,7 +91,7 @@ public class StockDemo
     }
     
     /**
-     * find a product from a partial name
+     * Method to find a product from a partial name
      */
     public void search(String prefix)
     {
@@ -105,6 +113,11 @@ public class StockDemo
         
     }
     
+    /**
+     * Print a heading to make it easier to
+     * differenciate the demonstrations in
+     * demo mode.
+     */
     public void printHeading(String verb)
     {
         System.out.println();
