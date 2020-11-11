@@ -29,6 +29,10 @@ public class StockManager
         stock.add(item);
     }
     
+    /**
+     * Method to remove a product from
+     * the stock list.
+     */
     public void removeProduct(int id)
     {
         Product product = findProduct(id);
@@ -43,16 +47,8 @@ public class StockManager
     }
     
     /**
-     *     public void renameProduct(int id, String name)
-    {
-        Product product = findProduct(id);
-        
-        if(product != null)
-        {
-            product.setName(name);
-        }
-    }
-     */
+     * Method to rename a product from the StockManager
+     */ 
     public void replaceName(int id, String replacementName)
     {
         Product product = findProduct(id);
@@ -155,7 +151,7 @@ public class StockManager
         }
     }
     
-     /**
+    /**
      * Print details and stock levels of all the products.
      */
     public void printAllProduct()
@@ -166,7 +162,7 @@ public class StockManager
         }
     }
         
-     /**
+    /**
      * Print products with low stock levels.
      */
     public void printLowStock()
@@ -183,6 +179,9 @@ public class StockManager
         }
     }
     
+    /**
+     * Print a heading.
+     */
     public void printHeading()
     {
         System.out.println("\n#############");
