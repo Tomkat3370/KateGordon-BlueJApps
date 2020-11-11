@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.*;
 /**
- * Manage the stock in a business.
+ * StockManager class is used to manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
  * @author Kate Gordon 
@@ -17,16 +17,16 @@ public class StockManager
      */
     public StockManager()
     {
-        stock = new ArrayList<>();
+        stock = new ArrayList<Product>();
     }
 
     /**
      * Add a product to the list.
      * @param item The item to be added.
      */
-    public void addProduct(Product product)
+    public void addProduct(Product item)
     {
-        stock.add(product);
+        stock.add(item);
     }
     
     public void removeProduct(int id)
@@ -40,6 +40,32 @@ public class StockManager
         {
             System.out.println("Please enter a valid id number");
         } 
+    }
+    
+    /**
+     *     public void renameProduct(int id, String name)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            product.setName(name);
+        }
+    }
+     */
+    public void replaceName(int id, String replacementName)
+    {
+        Product product = findProduct(id);
+        if(product != null)
+        {
+            product.changeName(id, replacementName);
+            System.out.println("Name Change Successful " 
+                + product);
+        }
+        else
+        {
+            System.out.println("Invalid ID!");
+        }
     }
 
     /**
@@ -88,7 +114,13 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        return 0;
+        Product product = findProduct(id);
+        
+        if(product == null)
+        {
+            return 0;
+        }
+        return product.getQuantity();
     }
 
     /**
@@ -133,25 +165,28 @@ public class StockManager
             System.out.println(product);
         }
     }
-    
-    /**
+        
+     /**
      * Print products with low stock levels.
      */
-    public void lowStock()
+    public void printLowStock()
     {
-        Product product = findProduct();
-        
-        if(quantity <= )
+        for(Product product : stock)
         {
-            System.out.println("WARNING LOW STOCK!! " + product + " "  
-                + quantity);
+            int id = 100;
+             if(product.getQuantity() < 2)
+            {
+                System.out.println("WARNING! Low Stock");
+                System.out.println(product);
+            }
+            id++;
         }
     }
     
     public void printHeading()
     {
         System.out.println("\n#############");
-        System.out.println("Kate Gordon");
+        System.out.println("Kate's Stock List");
         System.out.println("#############\n");
     } 
 }
