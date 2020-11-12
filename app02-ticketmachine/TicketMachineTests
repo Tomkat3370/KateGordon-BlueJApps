@@ -1,44 +1,112 @@
 TicketMachine blueJLinesTicketMachine = new TicketMachine();
-blueJLinesTicketMachine.insert100centCoin();
-blueJLinesTicketMachine.getBalance()
-    returned int 100
-blueJLinesTicketMachine.selectTicket("Aylesbury");
- please select a destination
-blueJLinesTicketMachine.insert200centCoin();
-blueJLinesTicketMachine.selectTicket("Amersham");
- please select a destination
-blueJLinesTicketMachine.selectTicket("High Wycombe");
- please select a destination
-blueJLinesTicketMachine.refundBalance()
-    returned int 300
-blueJLinesTicketMachine.getBalance()
-    returned int 0
 blueJLinesTicketMachine.printAllTickets();
  The following three destinations are available 
 
 
  Ticket to Aylesbury
  220 cents 
- Purchased Thu Oct 22 21:53:17 BST 2020
+ Purchased Thu Nov 12 02:20:58 GMT 2020
 
 
 
  Ticket to Amersham
  300 cents 
- Purchased Thu Oct 22 21:53:17 BST 2020
+ Purchased Thu Nov 12 02:20:58 GMT 2020
 
 
 
  Ticket to HighWycombe
  330 cents 
- Purchased Thu Oct 22 21:53:17 BST 2020
+ Purchased Thu Nov 12 02:20:58 GMT 2020
 
 
  Please select your ticket destination 
+blueJLinesTicketMachine.insert200centCoin();
+blueJLinesTicketMachine.selectHighWycombeTicket();
+blueJLinesTicketMachine.printTicket();
+You must insert at least: 130 more cents.
+blueJLinesTicketMachine.insert200centCoin();
+blueJLinesTicketMachine.selectHighWycombeTicket();
 blueJLinesTicketMachine.printTicket();
 ##################
 # The BlueJ Line
-# Ticket null
-# 0 cents.
+# Ticket to HighWycombe
+# 330 cents.
+# 12/Nov/2020
+##################
+
+blueJLinesTicketMachine.getBalance()
+    returned int 70
+blueJLinesTicketMachine.refundBalance()
+    returned int 70
+blueJLinesTicketMachine.getBalance()
+    returned int 0
+blueJLinesTicketMachine.insert100centCoin();
+blueJLinesTicketMachine.getBalance()
+    returned int 100
+blueJLinesTicketMachine.insert10centCoin();
+blueJLinesTicketMachine.getBalance()
+    returned int 110
+blueJLinesTicketMachine.insert200centCoin();
+blueJLinesTicketMachine.getBalance()
+    returned int 310
+blueJLinesTicketMachine.insert20centCoin();
+blueJLinesTicketMachine.getBalance()
+    returned int 330
+blueJLinesTicketMachine.selectAylesburyTicket();
+blueJLinesTicketMachine.printTicket();
+##################
+# The BlueJ Line
+# Ticket to Aylesbury
+# 220 cents.
+# 12/Nov/2020
+##################
+
+blueJLinesTicketMachine.getBalance()
+    returned int 110
+blueJLinesTicketMachine.refundBalance()
+    returned int 110
+blueJLinesTicketMachine.getBalance()
+    returned int 0
+blueJLinesTicketMachine.insert200centCoin();
+blueJLinesTicketMachine.insert100centCoin();
+blueJLinesTicketMachine.getBalance()
+    returned int 300
+blueJLinesTicketMachine.selectAylesburyTicket();
+blueJLinesTicketMachine.printTicket();
+##################
+# The BlueJ Line
+# Ticket to Aylesbury
+# 220 cents.
+# 12/Nov/2020
+##################
+
+blueJLinesTicketMachine.getBalance()
+    returned int 80
+blueJLinesTicketMachine.insert20centCoin();
+blueJLinesTicketMachine.insert200centCoin();
+blueJLinesTicketMachine.getBalance()
+    returned int 300
+blueJLinesTicketMachine.selectAmershamTicket();
+blueJLinesTicketMachine.printTicket();
+##################
+# The BlueJ Line
+# Ticket to Amersham
+# 300 cents.
+# 12/Nov/2020
+##################
+
+blueJLinesTicketMachine.insertMoney(850);
+blueJLinesTicketMachine.getBalance()
+    returned int 850
+blueJLinesTicketMachine.selectHighWycombeTicket();
+blueJLinesTicketMachine.selectAylesburyTicket();
+blueJLinesTicketMachine.selectAmershamTicket();
+blueJLinesTicketMachine.printTicket();
+##################
+# The BlueJ Line
+# Ticket to Amersham
+# 300 cents.
+# 12/Nov/2020
 ##################
 
