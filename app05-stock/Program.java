@@ -1,9 +1,9 @@
-
+import java.util.*;
 /**
  * Write a description of class Program here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Kate Gordon)
+ * @version (13/11/2020)
  */
 public class Program
 {
