@@ -27,16 +27,7 @@ public class StockDemo
         this.manager = manager;
 
         //choose products with full name for easy searching and create 10
-        manager.addProduct(new Product(100, "Stradivarous Violin"));
-        manager.addProduct(new Product(101, "Casio Keyboard"));
-        manager.addProduct(new Product(102, "Alexander FrenchHorn"));
-        manager.addProduct(new Product(103, "Music Stand"));
-        manager.addProduct(new Product(104, "Violin Strings"));
-        manager.addProduct(new Product(105, "Guitar Strings"));
-        manager.addProduct(new Product(106, "FrenchHorn Mute"));
-        manager.addProduct(new Product(107, "Violin Resin"));
-        manager.addProduct(new Product(108, "Violin Stand"));
-        manager.addProduct(new Product(109, "Guitar Stand"));
+
     }
 
     /**
