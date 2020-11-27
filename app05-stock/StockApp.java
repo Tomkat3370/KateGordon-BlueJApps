@@ -13,9 +13,17 @@ public class StockApp
     
     public static final String QUIT = "quit";
     public static final String ADD = "add";
-    public static final String PRINT_ALL = "printall";
-            
-    
+    public static final String PRINT_ALL = "print all";
+    public static final String REMOVE = "remove";
+    public static final String PRINT_LOW_STOCK = "print low stock";
+    public static final String FIND_PRODUCT = "find product";
+    public static final String REPLACE_NAME = "replace name";
+    public static final String DELIVERY = "delivery";
+    public static final String NUMBER_IN_STOCK = "number in stock";
+    public static final String SHOW_DETAILS = "show details";
+    public static final String SELL = "sell";
+    public static final String RUN_DEMO = "run demo";
+       
     // Use to get user input
     private InputReader input = new InputReader();
     
@@ -81,8 +89,18 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
-        System.out.println("    PrintAll:   Print all products");
+        System.out.println("    Print All:   Print all products");
         System.out.println("    Quit:       Quit the program");
+        System.out.println
+            ("    Print Low Stock:       Print all products with low stock");
+        System.out.println("    Find Product:       Find a product by ID number");
+        System.out.println("    Replace Name:       Replace a product name");
+        System.out.println("    Delivery:       Recieve a delivery of a product");
+        System.out.println("    Number in Stock:       Print the stock of a product");
+        System.out.println("    Show details:       Show the details of a product");
+        System.out.println("    Sell:       Sell a product");
+        System.out.println
+            ("    Run Demo:       Run a demonstration of delivery and sale of all products");
         System.out.println();        
     }
     
