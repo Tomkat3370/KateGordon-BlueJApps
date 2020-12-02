@@ -7,16 +7,27 @@ import java.util.Random;
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
- * @modified by Kate Gordon
- * @dated 01/11/2020
+ * modified by Kate Gordon
+ * dated 01/11/2020
  */
 public class StockDemo
 {
+    //Initial Stock List
+    public static final String Product_FIRST = "Stradivarous Violin";
+    public static final String Product_SECOND = "Casio Keyboard";
+    public static final String Product_THIRD = "Alexander FrenchHorn";
+    public static final String Product_FOURTH = "Music Stand";
+    public static final String Product_FIFTH = "Violin Strings";
+    public static final String Product_SIXTH = "Guitar Strings";
+    public static final String Product_SEVENTH = "FrenchHorn Mute";
+    public static final String Product_EIGHTH = "Violin Resin";
+    public static final String Product_NINTH = "Violin Stand";
+    public static final String Product_TENTH = "Guitar Stand";
     // The stock manager.
     private StockManager manager;
 
     private Random generator;
-
+    
     /**
      * Create a StockManager and populate it with a few
      * sample products.
@@ -106,7 +117,7 @@ public class StockDemo
     
     /**
      * Print a heading to make it easier to
-     * differenciate the demonstrations in
+     * differentiate the demonstrations in
      * demo mode.
      */
     public void printHeading(String verb)
