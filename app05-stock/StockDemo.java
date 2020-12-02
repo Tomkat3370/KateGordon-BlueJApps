@@ -12,17 +12,6 @@ import java.util.Random;
  */
 public class StockDemo
 {
-    //Initial Stock List
-    public static final String Product_FIRST = "Stradivarous Violin";
-    public static final String Product_SECOND = "Casio Keyboard";
-    public static final String Product_THIRD = "Alexander FrenchHorn";
-    public static final String Product_FOURTH = "Music Stand";
-    public static final String Product_FIFTH = "Violin Strings";
-    public static final String Product_SIXTH = "Guitar Strings";
-    public static final String Product_SEVENTH = "FrenchHorn Mute";
-    public static final String Product_EIGHTH = "Violin Resin";
-    public static final String Product_NINTH = "Violin Stand";
-    public static final String Product_TENTH = "Guitar Stand";
     // The stock manager.
     private StockManager manager;
 
@@ -36,9 +25,18 @@ public class StockDemo
     {
         generator = new Random();
         this.manager = manager;
-
+        
         //choose products with full name for easy searching and create 10
-
+        manager.addProduct(new Product(100, "Stradivarous Violin"));
+        manager.addProduct(new Product(101, "Casio Keyboard"));
+        manager.addProduct(new Product(102, "Alexander FrenchHorn"));
+        manager.addProduct(new Product(103, "Music Stand"));
+        manager.addProduct(new Product(104, "Violin Strings"));
+        manager.addProduct(new Product(105, "Guitar Strings"));
+        manager.addProduct(new Product(106, "FrenchHorn Mute"));
+        manager.addProduct(new Product(107, "Violin Resin"));
+        manager.addProduct(new Product(108, "Violin Stand"));
+        manager.addProduct(new Product(109, "Guitar Stand"));
     }
 
     /**
