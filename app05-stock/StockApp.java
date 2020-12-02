@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 /**
  * This app provides a user interface to the
  * stock manager so that users can add, edit,
@@ -25,27 +25,18 @@ public class StockApp
     public static final String RE_STOCK = "re-stock";
     public static final String RUN_DEMO = "run demo";
     public static final String QUIT = "quit";
-    
-    
+
+    Scanner scanner = new Scanner(System.in);
+
     // Use to get user input
-    private InputReader input;
+    private InputReader input = new InputReader();;
 
-    private StockManager manager;
+    private StockManager manager = new StockManager();
 
-    private StockDemo demo;
-    
-    /**
-     * Constructor
-     */
-    public StockApp()
-    {
-        input = new InputReader();
-        manager = new StockManager();
-        demo = new StockDemo(manager);
-    }
+    private StockDemo demo = new StockDemo(manager);
 
     /**
-     * R
+     * Method to run the program and display the menu.
      */
     public void run()
     {
@@ -56,8 +47,8 @@ public class StockApp
             printHeading();
             printMenuChoices();
 
-            String choice = input.getString().toLowerCase();
             System.out.println("Please enter your choice > ");
+            String choice = input.getString().toLowerCase();
 
             if(choice.equals(QUIT))
                 finished = true;
@@ -69,7 +60,9 @@ public class StockApp
     private void executeMenuChoice(String choice)
     {
         if(choice.equals(ADD))
+        {
             addProduct();
+        }
         else if(choice.equals(REMOVE))
         {
             removeProduct();
@@ -129,109 +122,99 @@ public class StockApp
         System.out.println("Adding new product\n");
 
         System.out.println("Please enter the product ID");
-        int id = input.getInt();
+        int id = scanner.nextInt();
 
         System.out.println("Please enter the product name");
         String name = input.getString();
-
+        
         Product product = new Product(id, name);
         manager.addProduct(product);
-
-        System.out.println("/n Product successfully added\n");
-
     }
 
     private void removeProduct()
     {
         System.out.println("Removing a product\n");
-        
+
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
-        
+        int id = scanner.nextInt();
+
         manager.removeProduct(id);        
     }
-    
+
     private void deliverProduct()
     {
         System.out.println("Delivery of a product\n");
-        
+
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
+        int id = scanner.nextInt();
         System.out.println("Please enter amount");
-        int amount = Integer.parseInt(value);
-                
+        int amount = scanner.nextInt();
+
         manager.deliverProduct(id, amount);         
     }
-    
+
     private void sellProduct()
     {
         System.out.println("Sell a product\n");
-        
+
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
+        int id = scanner.nextInt();
         System.out.println("Please enter amount");
-        int amount = Integer.parseInt(value);
-        
+        int amount = scanner.nextInt();
+
         manager.sellProduct(id, amount);         
     }
-    
+
     private void findProduct()
     {
         System.out.println("Find a product by ID number\n");
-        
+
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
-        
+        int id = scanner.nextInt();
+
         manager.findProduct(id);         
     }
-    
+
     private void search()
     {
         System.out.println("Search for an exsisting product\n");
-        
+
         System.out.println("Please enter full or partial product name\n");
         String prefix = input.getString();
-        
+
         demo.search(prefix);
     }
-    
+
     private void replaceName()
     {
         System.out.println("Replace a product name\n");
-        
+
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
-         
+        int id = scanner.nextInt();
+
         System.out.println("Please enter the new name for this product");
         String changeName = input.getString();
-        
+
         manager.replaceName(id, changeName);         
     }
-    
+
     private void numberInStock()
     {
         System.out.println("View amount of stock for a product");
-        
+
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
-        
+        int id = scanner.nextInt();
+
         manager.numberInStock(id);        
     }
-    
+
     private void showDetails()
     {
         System.out.println("Show the details of a product");
-        
+
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
-        
+        int id = scanner.nextInt();
+
         manager.showDetails(id);
     }
 
@@ -251,7 +234,7 @@ public class StockApp
         System.out.println("    Add:                Add a new product");
         System.out.println("    Remove:             Remove an old product");
         System.out.println("    Print All:          Print all products");
-        System.out.println("    Deliver:             " +
+        System.out.println("    Deliver:            " +
             "Recieve a delivery of a product");
         System.out.println("    Sell:               Sell a product");
         System.out.println("    Print Low Stock:    " + 
@@ -267,7 +250,7 @@ public class StockApp
         System.out.println("    Quit:               Quit the program");
         System.out.println();        
     }
-    
+
     /**
      * Print the title of the program and the authors name
      */
