@@ -26,7 +26,16 @@ public class StockManager
      */
     public void addProduct(Product item)
     {
-        stock.add(item);
+        if (findProduct(item.getID()) != null)
+        {
+            System.out.println("ID already exists, " +
+                "Please enter a new ID number");
+        }
+        else
+        {
+            stock.add(item);
+            System.out.println(item + " has been successfully added!");
+        }
     }
     
     /**
@@ -81,6 +90,18 @@ public class StockManager
         else 
         {
             System.out.println("Product ID " + id + "NOT FOUND!!!");
+        }
+    }
+    
+    public void restockProduct()
+    {
+        System.out.println("Restock all products to minimum level - 10");
+        for (Product product : stock)
+        {
+            if (product.getQuantity() <= 9)
+            {
+                product.setQuantity(10);
+            }
         }
     }
 
