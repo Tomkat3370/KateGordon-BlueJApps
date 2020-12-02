@@ -14,7 +14,7 @@ public class StockApp
     public static final String ADD = "add";
     public static final String REMOVE = "remove";
     public static final String PRINT_ALL = "print all";
-    public static final String DELIVER = "deliver stock";
+    public static final String DELIVER = "deliver";
     public static final String SELL = "sell";
     public static final String PRINT_LOW_STOCK = "print low stock";
     public static final String FIND_PRODUCT = "find product by ID";
@@ -25,13 +25,24 @@ public class StockApp
     public static final String RE_STOCK = "re-stock";
     public static final String RUN_DEMO = "run demo";
     public static final String QUIT = "quit";
-
+    
+    
     // Use to get user input
-    private InputReader input = new InputReader();
+    private InputReader input;
 
-    private StockManager manager = new StockManager();
+    private StockManager manager;
 
-    private StockDemo demo = new StockDemo(manager);
+    private StockDemo demo;
+    
+    /**
+     * Constructor
+     */
+    public StockApp()
+    {
+        input = new InputReader();
+        manager = new StockManager();
+        demo = new StockDemo(manager);
+    }
 
     /**
      * R
@@ -45,7 +56,7 @@ public class StockApp
             printHeading();
             printMenuChoices();
 
-            String choice = input.getString().toUpperCase();
+            String choice = input.getString().toLowerCase();
             System.out.println("Please enter your choice > ");
 
             if(choice.equals(QUIT))
@@ -66,7 +77,6 @@ public class StockApp
         else if(choice.equals(PRINT_ALL))
         {
             manager.printAllProduct();
-            String value = input.getString();
         }
         else if(choice.equals(DELIVER))
         {
@@ -119,8 +129,7 @@ public class StockApp
         System.out.println("Adding new product\n");
 
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
+        int id = input.getInt();
 
         System.out.println("Please enter the product name");
         String name = input.getString();
@@ -152,7 +161,7 @@ public class StockApp
         int id = Integer.parseInt(value);
         System.out.println("Please enter amount");
         int amount = Integer.parseInt(value);
-        
+                
         manager.deliverProduct(id, amount);         
     }
     
@@ -242,7 +251,7 @@ public class StockApp
         System.out.println("    Add:                Add a new product");
         System.out.println("    Remove:             Remove an old product");
         System.out.println("    Print All:          Print all products");
-        System.out.println("    Delivery:           " +
+        System.out.println("    Deliver:             " +
             "Recieve a delivery of a product");
         System.out.println("    Sell:               Sell a product");
         System.out.println("    Print Low Stock:    " + 
