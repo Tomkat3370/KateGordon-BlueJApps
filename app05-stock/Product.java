@@ -56,6 +56,11 @@ public class Product
     {
         name = replacementName;
     }
+    
+    public void setQuantity(int quantity)
+    {
+        this.quantity = quantity;
+    }
 
     /**
      * @return The quantity in stock.
@@ -105,7 +110,7 @@ public class Product
         }
         else if(amount > quantity && quantity > 0)
         {
-            System.out.println("Insuficient Stock " + quantity + 
+            System.out.println("Insufficient Stock " + quantity +
                 " amount ordered = " + amount);
             quantity = 0;
         }
