@@ -90,28 +90,7 @@ public class StockDemo
         }
     }
     
-    /**
-     * Method to find a product from a partial name
-     */
-    public void search(String prefix)
-    {
-        int id = 100;
-        
-        while(id <= 109)
-        {
-            Product product = manager.findProduct(id);
-            String name = product.getName();
-            name = name.toLowerCase();
-            prefix = prefix.toLowerCase();
-            
-            if(name.contains(prefix))
-            {
-                System.out.println(product);
-            }
-            id ++;
-        }
-        
-    }
+
     
     /**
      * Print a heading to make it easier to
