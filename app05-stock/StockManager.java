@@ -48,6 +48,7 @@ public class StockManager
         if(product != null)
         {
             stock.remove(product);
+            System.out.println(product + " was successfully removed");
         }
         else
         {
@@ -198,6 +199,29 @@ public class StockManager
             }
             id++;
         }
+    }
+    
+     /**
+     * Method to find a product from a partial name
+     */
+    public void search(String prefix)
+    {
+        int id = 100;
+        
+        Product product = findProduct(id);
+        while(id <= 109)
+        {
+            String name = product.getName();
+            name = name.toLowerCase();
+            prefix = prefix.toLowerCase();
+            
+            if(name.contains(prefix))
+            {
+                System.out.println(product);
+            }
+            id ++;
+        }
+        
     }
     
     /**
