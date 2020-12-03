@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.HashSet;
 import java.util.Scanner;
 /**
  * InputReader reads typed text input from the standard text terminal. 
