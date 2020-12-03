@@ -11,19 +11,14 @@ public class StockApp
 {
     public static final char CLEAR_CODE = '\u000c';
 
-    public static final String ADD = "add";
-    public static final String REMOVE = "remove";
-    public static final String PRINT_ALL = "print all";
+    public static final String ADD = "Add";
+    public static final String REMOVE = "Remove";
+    public static final String PRINT_ALL = "Print all";
     public static final String DELIVER = "deliver";
     public static final String SELL = "sell";
-    public static final String PRINT_LOW_STOCK = "print low stock";
-    public static final String FIND_PRODUCT = "find product by ID";
-    public static final String SEARCH = "search for a product";
-    public static final String REPLACE_NAME = "replace name";
-    public static final String NUMBER_IN_STOCK = "number in stock";
-    public static final String SHOW_DETAILS = "show details";
-    public static final String RE_STOCK = "re-stock";
-    public static final String RUN_DEMO = "run demo";
+    public static final String LOW_STOCK = "lowstock";
+    public static final String SEARCH = "search";
+    public static final String RE_STOCK = "restock";
     public static final String QUIT = "quit";
 
     Scanner scanner = new Scanner(System.in);
@@ -79,37 +74,17 @@ public class StockApp
         {
             sellProduct(); 
         }
-        else if(choice.equals(PRINT_LOW_STOCK))
+        else if(choice.equals(LOW_STOCK))
         {
             manager.printLowStock();
         }
-        else if(choice.equals(FIND_PRODUCT))
-        {
-            findProduct();
-        }
         else if(choice.equals(SEARCH))
         {
-            search();
-        }
-        else if(choice.equals(REPLACE_NAME))
-        {
-            replaceName();
-        }
-        else if(choice.equals(NUMBER_IN_STOCK))
-        {
-            numberInStock();
-        }
-        else if(choice.equals(SHOW_DETAILS))
-        {
-            showDetails();
+            searchProduct();
         }
         else if(choice.equals(RE_STOCK))
         {
             manager.restockProduct();
-        }
-        else if(choice.equals(RUN_DEMO))
-        {
-            demo.runDemo();
         }
         else
         {
@@ -127,8 +102,16 @@ public class StockApp
         System.out.println("Please enter the product name");
         String name = input.getString();
         
-        Product product = new Product(id, name);
-        manager.addProduct(product);
+        if (id != 0 && !name.isBlank())
+        {
+            Product product = new Product(id, name);
+            manager.addProduct(product);
+        }
+        else
+        {
+            System.out.println("Error! Please ensure all " +
+                "fields are filled in.");
+        }
     }
 
     private void removeProduct()
@@ -175,14 +158,14 @@ public class StockApp
         manager.findProduct(id);         
     }
 
-    private void search()
+    private void searchProduct()
     {
         System.out.println("Search for an exsisting product\n");
 
         System.out.println("Please enter full or partial product name\n");
         String prefix = input.getString();
 
-        demo.search(prefix);
+        manager.search(prefix);
     }
 
     private void replaceName()
@@ -224,30 +207,19 @@ public class StockApp
     private void printMenuChoices()
     {
         System.out.println();
-        System.out.println("    If you haven't used this system before, ");
-        System.out.println("    run the demonstration to see how it works\n");
-        System.out.println("    Run Demo:           " + 
-            "Run a demonstration of delivery");
-        System.out.println("                        " +
-            "and sale of all products\n");
-        System.out.println("                Main Menu");
-        System.out.println("    Add:                Add a new product");
-        System.out.println("    Remove:             Remove an old product");
-        System.out.println("    Print All:          Print all products");
-        System.out.println("    Deliver:            " +
+        System.out.println("                Main Menu\n");
+        System.out.println("     " + ADD +  "Add a new product");
+        System.out.println("     " + REMOVE + "Remove an old product");
+        System.out.println("     " + PRINT_ALL + "Print all products");
+        System.out.println("     " + DELIVER + 
             "Recieve a delivery of a product");
-        System.out.println("    Sell:               Sell a product");
-        System.out.println("    Print Low Stock:    " + 
+        System.out.println("     " + SELL + "Sell a product");
+        System.out.println("     " + LOW_STOCK + 
             "Print all products with low stock");
-        System.out.println("    Find Product:       " +
-            "Find a product by ID number");    
-        System.out.println("    Replace Name:       " +
-            "Replace a product name");
-        System.out.println("    Number in Stock:    " +
-            "Print the stock of a product");
-        System.out.println("    Show details:       " + 
-            "Show the details of a product");    
-        System.out.println("    Quit:               Quit the program");
+        System.out.println("     " + SEARCH +
+            "Search for a product using a prefix");
+        System.out.println("     " + RE_STOCK + "Restock products");
+        System.out.println("     " + QUIT + "Quit the program");
         System.out.println();        
     }
 
