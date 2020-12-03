@@ -1,0 +1,200 @@
+
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+    If you haven't used this system before, 
+    run the demonstration to see how it works
+
+    Run Demo:           Run a demonstration of delivery
+                        and sale of all products
+
+                Main Menu
+    Add:                Add a new product
+    Remove:             Remove an old product
+    Print All:          Print all products
+    Deliver:            Recieve a delivery of a product
+    Sell:               Sell a product
+    Print Low Stock:    Print all products with low stock
+    Find Product:       Find a product by ID number
+    Replace Name:       Replace a product name
+    Number in Stock:    Print the stock of a product
+    Show details:       Show the details of a product
+    Quit:               Quit the program
+
+Please enter your choice > 
+>     VM terminated.
+Program.main();
+100: Stradivarous Violin stock level: 0 has been successfully added!
+101: Casio Keyboard stock level: 0 has been successfully added!
+102: Alexander FrenchHorn stock level: 0 has been successfully added!
+103: Music Stand stock level: 0 has been successfully added!
+104: Violin Strings stock level: 0 has been successfully added!
+105: Guitar Strings stock level: 0 has been successfully added!
+106: FrenchHorn Mute stock level: 0 has been successfully added!
+107: Violin Resin stock level: 0 has been successfully added!
+108: Violin Stand stock level: 0 has been successfully added!
+109: Guitar Stand stock level: 0 has been successfully added!
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+    If you haven't used this system before, 
+    run the demonstration to see how it works
+
+    Run Demo:           Run a demonstration of delivery
+                        and sale of all products
+
+                Main Menu
+    Add:                Add a new product
+    Remove:             Remove an old product
+    Print All:          Print all products
+    Deliver:            Recieve a delivery of a product
+    Sell:               Sell a product
+    Print Low Stock:    Print all products with low stock
+    Find Product:       Find a product by ID number
+    Replace Name:       Replace a product name
+    Number in Stock:    Print the stock of a product
+    Show details:       Show the details of a product
+    Quit:               Quit the program
+
+Please enter your choice > 
+> add
+Adding new product
+
+Please enter the product ID
+103
+Please enter the product name
+> New Product
+ID already exists, Please enter a new ID number
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+    If you haven't used this system before, 
+    run the demonstration to see how it works
+
+    Run Demo:           Run a demonstration of delivery
+                        and sale of all products
+
+                Main Menu
+    Add:                Add a new product
+    Remove:             Remove an old product
+    Print All:          Print all products
+    Deliver:            Recieve a delivery of a product
+    Sell:               Sell a product
+    Print Low Stock:    Print all products with low stock
+    Find Product:       Find a product by ID number
+    Replace Name:       Replace a product name
+    Number in Stock:    Print the stock of a product
+    Show details:       Show the details of a product
+    Quit:               Quit the program
+
+Please enter your choice > 
+> add
+Adding new product
+
+Please enter the product ID
+116
+Please enter the product name
+> 
+116:  stock level: 0 has been successfully added!
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+    If you haven't used this system before, 
+    run the demonstration to see how it works
+
+    Run Demo:           Run a demonstration of delivery
+                        and sale of all products
+
+                Main Menu
+    Add:                Add a new product
+    Remove:             Remove an old product
+    Print All:          Print all products
+    Deliver:            Recieve a delivery of a product
+    Sell:               Sell a product
+    Print Low Stock:    Print all products with low stock
+    Find Product:       Find a product by ID number
+    Replace Name:       Replace a product name
+    Number in Stock:    Print the stock of a product
+    Show details:       Show the details of a product
+    Quit:               Quit the program
+
+Please enter your choice > 
+>     VM terminated.
+Program.main();
+100: Stradivarous Violin stock level: 0 has been successfully added!
+101: Casio Keyboard stock level: 0 has been successfully added!
+102: Alexander FrenchHorn stock level: 0 has been successfully added!
+103: Music Stand stock level: 0 has been successfully added!
+104: Violin Strings stock level: 0 has been successfully added!
+105: Guitar Strings stock level: 0 has been successfully added!
+106: FrenchHorn Mute stock level: 0 has been successfully added!
+107: Violin Resin stock level: 0 has been successfully added!
+108: Violin Stand stock level: 0 has been successfully added!
+109: Guitar Stand stock level: 0 has been successfully added!
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+    If you haven't used this system before, 
+    run the demonstration to see how it works
+
+    Run Demo:           Run a demonstration of delivery
+                        and sale of all products
+
+                Main Menu
+    Add:                Add a new product
+    Remove:             Remove an old product
+    Print All:          Print all products
+    Deliver:            Recieve a delivery of a product
+    Sell:               Sell a product
+    Print Low Stock:    Print all products with low stock
+    Find Product:       Find a product by ID number
+    Replace Name:       Replace a product name
+    Number in Stock:    Print the stock of a product
+    Show details:       Show the details of a product
+    Quit:               Quit the program
+
+Please enter your choice > 
+> add
+Adding new product
+
+Please enter the product ID
+116
+Please enter the product name
+> 
+Error! Please ensure all fields are filled in.
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+    If you haven't used this system before, 
+    run the demonstration to see how it works
+
+    Run Demo:           Run a demonstration of delivery
+                        and sale of all products
+
+                Main Menu
+    Add:                Add a new product
+    Remove:             Remove an old product
+    Print All:          Print all products
+    Deliver:            Recieve a delivery of a product
+    Sell:               Sell a product
+    Print Low Stock:    Print all products with low stock
+    Find Product:       Find a product by ID number
+    Replace Name:       Replace a product name
+    Number in Stock:    Print the stock of a product
+    Show details:       Show the details of a product
+    Quit:               Quit the program
+
+Please enter your choice > 
+> 
