@@ -7,6 +7,8 @@ import java.util.Scanner;
  * 
  * @author     Michael Kölling and David J. Barnes
  * @version    0.1 (2016.02.29)
+ * modified  Kate Gordon
+ * version   03/12/2020
  */
 public class InputReader
 {
@@ -28,9 +30,9 @@ public class InputReader
      */
     public String getString()
     {
-        System.out.print("> ");         // print prompt
+        System.out.print("");         // print prompt
         String inputLine = reader.nextLine();
 
         return inputLine;
     }
-}
+    }
