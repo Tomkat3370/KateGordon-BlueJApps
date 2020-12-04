@@ -16,7 +16,7 @@ public class Product
     private String name;
     // The quantity of this product in stock.
     private int quantity;
-    
+
     private int lowStock;
 
     /**
@@ -48,7 +48,7 @@ public class Product
     {
         return name;
     }
-    
+
     /**
      * Set a new name for a product based on ID number.
      */
@@ -56,8 +56,10 @@ public class Product
     {
         name = replacementName;
     }
-    
-    public void setQuantity(int quantity)
+
+    /**
+     * set the minimum quantity in stock
+     */public void setQuantity(int quantity)
     {
         this.quantity = quantity;
     }
@@ -69,7 +71,7 @@ public class Product
     {
         return quantity;
     }
-   
+
     /**
      * @return The id, name and quantity in stock.
      */
@@ -93,7 +95,7 @@ public class Product
         else 
         {
             System.out.println("Attempt to restock " + name +
-                               " with a non-positive amount: " + amount);
+                " with a non-positive amount: " + amount);
         }
     }
 
@@ -107,6 +109,13 @@ public class Product
         {
             quantity -= amount;
             System.out.println("Sold " + amount + " of " + name);
+
+        }
+        else if( amount < -1) 
+        {
+            quantity -= amount;
+            System.out.println("Attempt to sell negative amount: " 
+                + amount + " of " + name);
         }
         else if(amount > quantity && quantity > 0)
         {
@@ -114,10 +123,12 @@ public class Product
                 " amount ordered = " + amount);
             quantity = 0;
         }
+
         else
         {
             System.out.println(
                 "Attempt to sell an out of stock item: " + name);
         }
+
     }
 }
