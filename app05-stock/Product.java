@@ -105,17 +105,16 @@ public class Product
      */
     public void sell(int amount)
     {
-        if(quantity >= amount && quantity > 0) 
+        if( amount < 0) 
+        {
+            System.out.println("Attempt to sell negative amount: " 
+                + amount + " of " + name);
+        }
+        else if(quantity >= amount && quantity > 0) 
         {
             quantity -= amount;
             System.out.println("Sold " + amount + " of " + name);
 
-        }
-        else if( amount < -1) 
-        {
-            quantity -= amount;
-            System.out.println("Attempt to sell negative amount: " 
-                + amount + " of " + name);
         }
         else if(amount > quantity && quantity > 0)
         {
@@ -123,12 +122,10 @@ public class Product
                 " amount ordered = " + amount);
             quantity = 0;
         }
-
         else
         {
             System.out.println(
                 "Attempt to sell an out of stock item: " + name);
         }
-
     }
 }
