@@ -11,15 +11,15 @@ public class StockApp
 {
     public static final char CLEAR_CODE = '\u000c';
 
-    public static final String ADD = "Add";
-    public static final String REMOVE = "Remove";
-    public static final String PRINT_ALL = "Print all";
-    public static final String DELIVER = "deliver";
-    public static final String SELL = "sell";
-    public static final String LOW_STOCK = "lowstock";
-    public static final String SEARCH = "search";
-    public static final String RE_STOCK = "restock";
-    public static final String QUIT = "quit";
+    public static final String ADD = "ADD";
+    public static final String REMOVE = "REMOVE";
+    public static final String PRINT_ALL = "PRINT ALL";
+    public static final String DELIVER = "DELIVER";
+    public static final String SELL = "SELL";
+    public static final String LOW_STOCK = "LOW STOCK";
+    public static final String SEARCH = "SEARCH";
+    public static final String RE_STOCK = "RESTOCK";
+    public static final String QUIT = "QUIT";
 
     Scanner scanner = new Scanner(System.in);
 
@@ -29,22 +29,21 @@ public class StockApp
     private StockManager manager = new StockManager();
 
     private StockDemo demo = new StockDemo(manager);
-
+    
     /**
      * Method to run the program and display the menu.
      */
     public void run()
     {
         boolean finished = false;
-
-        while(!finished)
+         while(!finished)
         {
             printHeading();
             printMenuChoices();
-
+            
             System.out.println("Please enter your choice > ");
-            String choice = input.getString().toLowerCase();
-
+            String choice = input.getString().toUpperCase();
+                        
             if(choice.equals(QUIT))
                 finished = true;
             else
@@ -52,6 +51,9 @@ public class StockApp
         }
     }
 
+    /**
+     * Method call for menu choices
+     */
     private void executeMenuChoice(String choice)
     {
         if(choice.equals(ADD))
@@ -92,6 +94,9 @@ public class StockApp
         }
     }
 
+    /**
+     * Method to add a product using the user interface
+     */
     private void addProduct()
     {
         System.out.println("Adding new product\n");
@@ -114,9 +119,12 @@ public class StockApp
         }
     }
 
+    /**
+     * Method to remove a product using the user interface
+     */
     private void removeProduct()
     {
-        System.out.println("Removing a product\n");
+        System.out.println("Remove a product\n");
 
         System.out.println("Please enter the product ID");
         int id = scanner.nextInt();
@@ -124,6 +132,10 @@ public class StockApp
         manager.removeProduct(id);        
     }
 
+    /**
+     * Method to deliver a set amount of a product using the user 
+     * interface
+     */
     private void deliverProduct()
     {
         System.out.println("Delivery of a product\n");
@@ -136,6 +148,9 @@ public class StockApp
         manager.deliverProduct(id, amount);         
     }
 
+    /**
+     * Method to sell a set amount of a product using the user interface
+     */
     private void sellProduct()
     {
         System.out.println("Sell a product\n");
@@ -148,16 +163,10 @@ public class StockApp
         manager.sellProduct(id, amount);         
     }
 
-    private void findProduct()
-    {
-        System.out.println("Find a product by ID number\n");
-
-        System.out.println("Please enter the product ID");
-        int id = scanner.nextInt();
-
-        manager.findProduct(id);         
-    }
-
+    /**
+     * Method to search for a product by a partial name using the 
+     * user interface
+     */
     private void searchProduct()
     {
         System.out.println("Search for an exsisting product\n");
@@ -165,40 +174,7 @@ public class StockApp
         System.out.println("Please enter full or partial product name\n");
         String prefix = input.getString();
 
-        manager.search(prefix);
-    }
-
-    private void replaceName()
-    {
-        System.out.println("Replace a product name\n");
-
-        System.out.println("Please enter the product ID");
-        int id = scanner.nextInt();
-
-        System.out.println("Please enter the new name for this product");
-        String changeName = input.getString();
-
-        manager.replaceName(id, changeName);         
-    }
-
-    private void numberInStock()
-    {
-        System.out.println("View amount of stock for a product");
-
-        System.out.println("Please enter the product ID");
-        int id = scanner.nextInt();
-
-        manager.numberInStock(id);        
-    }
-
-    private void showDetails()
-    {
-        System.out.println("Show the details of a product");
-
-        System.out.println("Please enter the product ID");
-        int id = scanner.nextInt();
-
-        manager.showDetails(id);
+        demo.search(prefix);
     }
 
     /**
@@ -208,18 +184,18 @@ public class StockApp
     {
         System.out.println();
         System.out.println("                Main Menu\n");
-        System.out.println("     " + ADD +  "Add a new product");
-        System.out.println("     " + REMOVE + "Remove an old product");
-        System.out.println("     " + PRINT_ALL + "Print all products");
+        System.out.println("     " + ADD + "            Add a new product");
+        System.out.println("     " + REMOVE + "         Remove an old product");
+        System.out.println("     " + PRINT_ALL + "      Print all products");
         System.out.println("     " + DELIVER + 
-            "Recieve a delivery of a product");
-        System.out.println("     " + SELL + "Sell a product");
-        System.out.println("     " + LOW_STOCK + 
-            "Print all products with low stock");
+            "        Recieve a delivery of a product");
+        System.out.println("     " + SELL + "           Sell a product");
+        System.out.println("     " + LOW_STOCK +
+            "       Print all products with low stock");
         System.out.println("     " + SEARCH +
-            "Search for a product using a prefix");
-        System.out.println("     " + RE_STOCK + "Restock products");
-        System.out.println("     " + QUIT + "Quit the program");
+            "         Search for a product using a prefix");
+        System.out.println("     " + RE_STOCK + "        Restock products");
+        System.out.println("     " + QUIT + "           Quit the program");
         System.out.println();        
     }
 
