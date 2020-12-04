@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.Random;
+import java.io.IOException;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -8,7 +9,7 @@ import java.util.Random;
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
  * modified by Kate Gordon
- * dated 01/11/2020
+ * dated 03/12/2020
  */
 public class StockDemo
 {
@@ -90,8 +91,32 @@ public class StockDemo
         }
     }
     
+     /**
+     * Method to find a product from a partial name
+     */
+    public void search(String prefix)
+    {
+        int id = 100;
+        
+        while(id <= 120)
+        {
+            Product product = manager.findProduct(id);
+            String name = product.getName().toLowerCase();
+            prefix = prefix.toLowerCase();
+            
+            if(name.contains(prefix))
+            {
+                System.out.println(product);
+            }
+            else
+            {
+                System.out.println("not found!");
+            }
+            id ++;
+        }
 
-    
+    }
+     
     /**
      * Print a heading to make it easier to
      * differentiate the demonstrations in
