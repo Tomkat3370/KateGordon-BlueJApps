@@ -1,0 +1,238 @@
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+                Main Menu
+
+     ADD            Add a new product
+     REMOVE         Remove an old product
+     PRINT ALL      Print all products
+     DELIVER        Recieve a delivery of a product
+     SELL           Sell a product
+     LOW STOCK       Print all products with low stock
+     SEARCH         Search for a product using a prefix
+     RESTOCK        Restock products
+     QUIT           Quit the program
+
+Please enter your choice > 
+search
+Search for an exsisting product
+
+Please enter full or partial product name
+
+violin
+100: Stradivarous Violin stock level: 2
+not found!
+not found!
+not found!
+104: Violin Strings stock level: 0
+not found!
+not found!
+107: Violin Resin stock level: 0
+108: Violin Stand stock level: 0
+    Exception occurred.
+Program.main();
+100: Stradivarous Violin stock level: 0 has been successfully added!
+101: Casio Keyboard stock level: 0 has been successfully added!
+102: Alexander FrenchHorn stock level: 0 has been successfully added!
+103: Music Stand stock level: 0 has been successfully added!
+104: Violin Strings stock level: 0 has been successfully added!
+105: Guitar Strings stock level: 0 has been successfully added!
+106: FrenchHorn Mute stock level: 0 has been successfully added!
+107: Violin Resin stock level: 0 has been successfully added!
+108: Violin Stand stock level: 0 has been successfully added!
+109: Guitar Stand stock level: 0 has been successfully added!
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+                Main Menu
+
+     ADD            Add a new product
+     REMOVE         Remove an old product
+     PRINT ALL      Print all products
+     DELIVER        Recieve a delivery of a product
+     SELL           Sell a product
+     LOW STOCK       Print all products with low stock
+     SEARCH         Search for a product using a prefix
+     RESTOCK        Restock products
+     QUIT           Quit the program
+
+Please enter your choice > 
+low stock
+WARNING! Low Stock
+100: Stradivarous Violin stock level: 0
+WARNING! Low Stock
+101: Casio Keyboard stock level: 0
+WARNING! Low Stock
+102: Alexander FrenchHorn stock level: 0
+WARNING! Low Stock
+103: Music Stand stock level: 0
+WARNING! Low Stock
+104: Violin Strings stock level: 0
+WARNING! Low Stock
+105: Guitar Strings stock level: 0
+WARNING! Low Stock
+106: FrenchHorn Mute stock level: 0
+WARNING! Low Stock
+107: Violin Resin stock level: 0
+WARNING! Low Stock
+108: Violin Stand stock level: 0
+WARNING! Low Stock
+109: Guitar Stand stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+                Main Menu
+
+     ADD            Add a new product
+     REMOVE         Remove an old product
+     PRINT ALL      Print all products
+     DELIVER        Recieve a delivery of a product
+     SELL           Sell a product
+     LOW STOCK       Print all products with low stock
+     SEARCH         Search for a product using a prefix
+     RESTOCK        Restock products
+     QUIT           Quit the program
+
+Please enter your choice > 
+search
+Search for an exsisting product
+
+Please enter full or partial product name
+
+violin
+100: Stradivarous Violin stock level: 0
+    VM terminated.
+Program.main();
+100: Stradivarous Violin stock level: 0 has been successfully added!
+101: Casio Keyboard stock level: 0 has been successfully added!
+102: Alexander FrenchHorn stock level: 0 has been successfully added!
+103: Music Stand stock level: 0 has been successfully added!
+104: Violin Strings stock level: 0 has been successfully added!
+105: Guitar Strings stock level: 0 has been successfully added!
+106: FrenchHorn Mute stock level: 0 has been successfully added!
+107: Violin Resin stock level: 0 has been successfully added!
+108: Violin Stand stock level: 0 has been successfully added!
+109: Guitar Stand stock level: 0 has been successfully added!
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+                Main Menu
+
+     ADD            Add a new product
+     REMOVE         Remove an old product
+     PRINT ALL      Print all products
+     DELIVER        Recieve a delivery of a product
+     SELL           Sell a product
+     LOW STOCK       Print all products with low stock
+     SEARCH         Search for a product using a prefix
+     RESTOCK        Restock products
+     QUIT           Quit the program
+
+Please enter your choice > 
+search
+Search for an exsisting product
+
+Please enter full or partial product name
+
+violin
+    Exception occurred.
+Program.main();
+100: Stradivarous Violin stock level: 0 has been successfully added!
+101: Casio Keyboard stock level: 0 has been successfully added!
+102: Alexander FrenchHorn stock level: 0 has been successfully added!
+103: Music Stand stock level: 0 has been successfully added!
+104: Violin Strings stock level: 0 has been successfully added!
+105: Guitar Strings stock level: 0 has been successfully added!
+106: FrenchHorn Mute stock level: 0 has been successfully added!
+107: Violin Resin stock level: 0 has been successfully added!
+108: Violin Stand stock level: 0 has been successfully added!
+109: Guitar Stand stock level: 0 has been successfully added!
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+                Main Menu
+
+     ADD            Add a new product
+     REMOVE         Remove an old product
+     PRINT ALL      Print all products
+     DELIVER        Recieve a delivery of a product
+     SELL           Sell a product
+     LOW STOCK       Print all products with low stock
+     SEARCH         Search for a product using a prefix
+     RESTOCK        Restock products
+     QUIT           Quit the program
+
+Please enter your choice > 
+search
+Search for an exsisting product
+
+Please enter full or partial product name
+
+stand
+not found!
+not found!
+not found!
+    Exception occurred.
+103: Music Stand stock level: 0
+not found!
+not found!
+not found!
+not found!
+108: Violin Stand stock level: 0
+109: Guitar Stand stock level: 0
+Program.main();
+100: Stradivarous Violin stock level: 0 has been successfully added!
+101: Casio Keyboard stock level: 0 has been successfully added!
+102: Alexander FrenchHorn stock level: 0 has been successfully added!
+103: Music Stand stock level: 0 has been successfully added!
+104: Violin Strings stock level: 0 has been successfully added!
+105: Guitar Strings stock level: 0 has been successfully added!
+106: FrenchHorn Mute stock level: 0 has been successfully added!
+107: Violin Resin stock level: 0 has been successfully added!
+108: Violin Stand stock level: 0 has been successfully added!
+109: Guitar Stand stock level: 0 has been successfully added!
+******************************
+ Stock Management Application 
+    App05: by Kate Gordon
+******************************
+
+                Main Menu
+
+     ADD            Add a new product
+     REMOVE         Remove an old product
+     PRINT ALL      Print all products
+     DELIVER        Recieve a delivery of a product
+     SELL           Sell a product
+     LOW STOCK       Print all products with low stock
+     SEARCH         Search for a product using a prefix
+     RESTOCK        Restock products
+     QUIT           Quit the program
+
+Please enter your choice > 
+search
+Search for an exsisting product
+
+Please enter full or partial product name
+
+violin
+100: Stradivarous Violin stock level: 0    Exception occurred.
+
+not found!
+not found!
+not found!
+104: Violin Strings stock level: 0
+not found!
+not found!
+107: Violin Resin stock level: 0
+108: Violin Stand stock level: 0
+not found!
