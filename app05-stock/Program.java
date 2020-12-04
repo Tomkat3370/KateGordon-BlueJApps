@@ -1,9 +1,9 @@
 import java.util.*;
 /**
- * Write a description of class Program here.
+ * Program class runs an instance of the application.
  *
- * @author (Kate Gordon)
- * @version (13/11/2020)
+ * @author  Kate Gordon
+ * @version 13/11/2020
  */
 public class Program
 {
