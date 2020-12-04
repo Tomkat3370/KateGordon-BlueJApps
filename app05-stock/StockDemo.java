@@ -13,6 +13,8 @@ import java.io.IOException;
  */
 public class StockDemo
 {
+    public static final int FIRST_ID = 100;
+    public static final int LAST_ID = 120;
     // The stock manager.
     private StockManager manager;
 
@@ -91,28 +93,29 @@ public class StockDemo
         }
     }
     
-     /**
+    /**
      * Method to find a product from a partial name
      */
     public void search(String prefix)
     {
-        int id = 100;
+        int id = FIRST_ID;
         
-        while(id <= 120)
+        while(id <= LAST_ID)
         {
             Product product = manager.findProduct(id);
-            String name = product.getName().toLowerCase();
-            prefix = prefix.toLowerCase();
+            if(product != null)
+            {
+                String name = product.getName().toLowerCase();
+                prefix = prefix.toLowerCase();
             
-            if(name.contains(prefix))
-            {
+                if(name.contains(prefix))
+                {
                 System.out.println(product);
+                }
+
+                id ++;
             }
-            else
-            {
-                System.out.println("not found!");
-            }
-            id ++;
+
         }
 
     }
