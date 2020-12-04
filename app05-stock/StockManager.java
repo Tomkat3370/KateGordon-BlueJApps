@@ -94,12 +94,14 @@ public class StockManager
         }
     }
     
-    public void restockProduct()
+    /**
+     * Restock to a set minimum amount from low stock, for all products.
+     */public void restockProduct()
     {
-        System.out.println("Restock all products to minimum level - 10");
+        System.out.println("Restock all products to minimum amount - 10");
         for (Product product : stock)
         {
-            if (product.getQuantity() <= 9)
+            if (product.getQuantity() <= 2)
             {
                 product.setQuantity(10);
             }
@@ -164,12 +166,15 @@ public class StockManager
     public void sellProduct(int id, int amount)
     {
         Product product = findProduct(id);
-
-        if(product != null) 
+        
+        if(product != null)
         {
-            showDetails(id);
             product.sell(amount);
-            showDetails(id);
+            System.out.println("Product Sold : " + product);
+        }
+        else 
+        {
+            System.out.println("Product ID " + id + "NOT FOUND!!!");
         }
     }
     
@@ -200,30 +205,7 @@ public class StockManager
             id++;
         }
     }
-    
-     /**
-     * Method to find a product from a partial name
-     */
-    public void search(String prefix)
-    {
-        int id = 100;
         
-        Product product = findProduct(id);
-        while(id <= 109)
-        {
-            String name = product.getName();
-            name = name.toLowerCase();
-            prefix = prefix.toLowerCase();
-            
-            if(name.contains(prefix))
-            {
-                System.out.println(product);
-            }
-            id ++;
-        }
-        
-    }
-    
     /**
      * Print a heading.
      */
